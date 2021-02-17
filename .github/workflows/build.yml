@@ -44,7 +44,6 @@ jobs:
           password: ${{ secrets.QUAY_PASSWORD }}
       -
         name: "Build and push ${{ matrix.arch }}"
-        uses: docker/build-push-action@v2
         run: |
           docker build -t quay.io/eclipse/che-operator:nightly --push .
 
