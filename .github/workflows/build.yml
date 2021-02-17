@@ -19,10 +19,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [amd64,arm64,ppc64le,s390x]
+        arch: [amd64,ppc64le,s390x]
     outputs:
       amd64: ${{ steps.result.outputs.amd64 }}
-      arm64: ${{ steps.result.outputs.arm64 }}
       ppc64le: ${{ steps.result.outputs.ppc64le }}
       s390x: ${{ steps.result.outputs.s390x }}
     steps:
@@ -44,7 +43,10 @@ jobs:
           password: ${{ secrets.QUAY_PASSWORD }}
       -
         name: "Build and push ${{ matrix.arch }}"
-        run: |
-          docker build -t quay.io/flacatus/che-operator:nightly .
-          docker push quay.io/flacatus/che-operator:nightly
-
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/${{ matrix.arch }}
+          push: true
+          tags: quay.io/eclipse/che-operator:nightly
