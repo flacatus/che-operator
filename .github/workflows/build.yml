@@ -45,6 +45,6 @@ jobs:
       -
         name: "Build and push ${{ matrix.arch }}"
         run: |
-          docker build -t quay.io/eclipse/che-operator:nightly .
-          docker push quay.io/eclipse/che-operator:nightly
+          docker build -t quay.io/flacatus/che-operator:nightly .
+          docker push quay.io/flacatus/che-operator:nightly
 
