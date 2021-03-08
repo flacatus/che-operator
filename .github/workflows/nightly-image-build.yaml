@@ -9,13 +9,7 @@
 
 name: CI:multiarch
 
-on:
-  workflow_dispatch:
-    inputs: {}
-  push:
-    branches:
-      - master
-
+on: [pull_request, push]
 env:
   IMAGE: quay.io/flacatus/che-operator
   CACHE_IMAGE_FULL: docker.io/cheincubator/che-dashboard:cache
@@ -53,7 +47,9 @@ jobs:
           password: ${{ secrets.QUAY_PASSWORD }}
       - 
         name: Clean cache
-        run: sudo rm -fr /etc/ld.so.cache
+        run: |
+          sudo rm -fr /etc/ld.so.cache
+          /usr/bin/qemu-system-x86_64 --version
       -
         name: "Build and push ${{ matrix.arch }}"
         uses: docker/build-push-action@v2
