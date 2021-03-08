@@ -31,9 +31,5 @@ jobs:
       -
         name: Run Buildx
         run: |
-          docker buildx build \
-            --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x \
-            --output "type=image,push=true" \
-            --file Dockerfile \
-            --tag=quay.io/flacatus/che-operator:nextx
+          docker buildx build --platform=linux/s390x -t quay.io/flacatus/che-operator:nextx --push .
 
