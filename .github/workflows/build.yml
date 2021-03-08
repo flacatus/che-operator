@@ -33,4 +33,4 @@ jobs:
       -
         name: Build
         run: |
-          docker build --tag quay.io/flacatus/che-operator:fla --platform linux/amd64,linux/ppc64le,linux/s390x --push . # will run buildx
+          docker build --tag quay.io/flacatus/che-operator:fla --platform linux/s390x --push . # will run buildx
