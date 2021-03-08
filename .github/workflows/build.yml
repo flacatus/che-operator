@@ -24,6 +24,13 @@ jobs:
         with:
           install: true
       -
+        name: "Docker quay.io Login"
+        uses: docker/login-action@v1
+        with:
+          registry: quay.io
+          username: ${{ secrets.QUAY_USERNAME }}
+          password: ${{ secrets.QUAY_PASSWORD }}
+      -
         name: Build
         run: |
-          docker build . # will run buildx
+          docker build --tag quay.io/flacatus/che-operator:fla --platform linux/amd64,linux/ppc64le,linux/s390x --push . # will run buildx
