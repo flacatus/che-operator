@@ -22,7 +22,7 @@ ADD . /che-operator
 WORKDIR /che-operator
 
 RUN export MOCK_API=true \
-    GOOS=linux GOARCH=s390x CGO_ENABLED=0 go build -v -mod=vendor -o /tmp/che-operator/che-operator cmd/manager/main.go
+    GOOS=linux GOARCH=s390x GO111MODULE=on CGO_ENABLED=0 go build -v -mod=vendor -o /tmp/che-operator/che-operator cmd/manager/main.go
 
 # https://access.redhat.com/containers/?tab=tags#/registry.access.redhat.com/ubi8-minimal
 FROM registry.access.redhat.com/ubi8-minimal:8.3-230
