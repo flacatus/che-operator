@@ -35,6 +35,9 @@ jobs:
       -
         name: "Set up QEMU"
         uses: docker/setup-qemu-action@v1
+        with:
+          image: tonistiigi/binfmt:qemu-v5.2.0
+          platforms: all
       -
         name: "Set up Docker Buildx ${{ matrix.arch }}"
         uses: docker/setup-buildx-action@v1
@@ -49,7 +52,6 @@ jobs:
         name: Clean cache
         run: |
           sudo rm -fr /etc/ld.so.cache
-          qemu-system-x86_64 --version
       -
         name: "Build and push ${{ matrix.arch }}"
         uses: docker/build-push-action@v2
