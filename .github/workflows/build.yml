@@ -9,11 +9,8 @@
 #  Contributors:
 #    Red Hat, Inc. - initial API and implementation
 #
-name: buildxx
-
-on:
-  pull_request:
-    branches: master
+name: Eclipse Che operator IIImage
+on: [pull_request, push]
 jobs:
   buildx:
     runs-on: ubuntu-latest
@@ -26,7 +23,7 @@ jobs:
         id: buildx
         uses: crazy-max/ghaction-docker-buildx@v3
         with:
-          buildx-version: "0.4.1"
+          buildx-version: 0.4.1
           qemu-version: latest
       -
         name: Available platforms
