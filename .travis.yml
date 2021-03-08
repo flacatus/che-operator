@@ -13,4 +13,4 @@ before_install:
   - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.5.1/buildx-v0.5.1.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
   - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
-  - docker buildx build --platform linux/s390x --tag quay.io/flacatus/che-operator:latest
+  - docker buildx build --platform=linux/s390x -t quay.io/flacatus/che-operator --push .
