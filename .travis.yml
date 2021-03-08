@@ -6,5 +6,5 @@ services:
   - docker
 script:
   - docker login -u="flacatus" -p="n0KB1Z+36Jl/FjmyKtru9d3YtkfS5y9qSzhUP0xadlAYTtwDePiyXfAdhW05LQfB" quay.io
-  - docker build -t quay.io/flacatus/che-operator:latest
+  - docker build -t quay.io/flacatus/che-operator:latest .
   - docker push quay.io/flacatus/che-operator:latest
