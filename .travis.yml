@@ -3,13 +3,13 @@ go:
   - "1.13.x"
 arch:
   - amd64
-  - ppc64le
-  - s390x
-  - arm64
 install: skip
 services:
   - docker
 script:
+  - mkdir -vp ~/.docker/cli-plugins/
+  - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.3.0/buildx-v0.3.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
+  - chmod a+x ~/.docker/cli-plugins/docker-buildx
   - docker login -u="flacatus" -p="n0KB1Z+36Jl/FjmyKtru9d3YtkfS5y9qSzhUP0xadlAYTtwDePiyXfAdhW05LQfB" quay.io
-  - docker build -t quay.io/flacatus/che-operator:latest .
+  - docker buildx build --platform linux/s390x,linux/amd64 --tag quay.io/flacatus/che-operator:latest .
   - docker push quay.io/flacatus/che-operator:latest
