@@ -4,15 +4,22 @@ go:
 matrix:
   include:
    - os: linux
-     arch: ppc64le
-   - os: linux
      arch: s390x
 install: skip
-services:
-  - docker
+before_install:
+  - sudo rm -rf /var/lib/apt/lists/*
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) edge"
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+  - mkdir -vp ~/.docker/cli-plugins/
+  - curl --silent -L "https://github.com/docker/buildx/releases/download/v0.3.0/buildx-v0.3.0.linux-amd64" > ~/.docker/cli-plugins/docker-buildx
+  - chmod a+x ~/.docker/cli-plugins/docker-buildx
 script:
   - uname -m
   - docker login -u="flacatus" -p="n0KB1Z+36Jl/FjmyKtru9d3YtkfS5y9qSzhUP0xadlAYTtwDePiyXfAdhW05LQfB" quay.io
   - docker build -t quay.io/flacatus/che-operator:latest .
   - docker push quay.io/flacatus/che-operator:latest
   - docker inspect quay.io/flacatus/che-operator:latest
+script:
+  - docker buildx build --platform linux/arm/v7,linux/arm64/v8,linux/s390x --tag quay.io/flacatus/che-operator:latest
