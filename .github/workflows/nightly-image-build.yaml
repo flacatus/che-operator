@@ -49,7 +49,7 @@ jobs:
         name: Clean cache
         run: |
           sudo rm -fr /etc/ld.so.cache
-          /usr/bin/qemu-system-x86_64 --version
+          qemu-system-x86_64 --version
       -
         name: "Build and push ${{ matrix.arch }}"
         uses: docker/build-push-action@v2
