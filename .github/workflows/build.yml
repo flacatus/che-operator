@@ -33,6 +33,6 @@ jobs:
       -
         name: Build
         run: |
-          apt-get install qemu-user-static
+          sudo apt install qemu-user-static
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
           docker build --tag quay.io/flacatus/che-operator:fla --platform linux/s390x --push . # will run buildx
