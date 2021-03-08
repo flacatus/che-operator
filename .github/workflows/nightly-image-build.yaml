@@ -51,6 +51,9 @@ jobs:
           registry: quay.io
           username: ${{ secrets.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_PASSWORD }}
+      - 
+        name: Clean cache
+        run: sudo rm -fr /etc/ld.so.cache
       -
         name: "Build and push ${{ matrix.arch }}"
         uses: docker/build-push-action@v2
