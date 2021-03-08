@@ -36,7 +36,7 @@ jobs:
         name: "Set up QEMU"
         uses: docker/setup-qemu-action@v1
         with:
-          image: tonistiigi/binfmt:qemu-v5.2.0
+          image: multiarch/qemu-user-static
           platforms: all
       -
         name: "Set up Docker Buildx ${{ matrix.arch }}"
