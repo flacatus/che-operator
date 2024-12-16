@@ -46,7 +46,7 @@ func SetupSignalHandler(terminationPeriod int64) context.Context {
 		// Otherwise resource won't be clean up gracefully
 		// and Che custom resource will stay with non empty "finalizers" field.
 		time.Sleep(time.Duration(terminationPeriod) * time.Second)
-		logrus.Info("Stop and exit operator.")
+		logrus.Info("Stop and exit operator...")
 		// Stop Che controller
 		cancel()
 		<-c
