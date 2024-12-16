@@ -35,12 +35,7 @@ COPY go.mod go.mod
 COPY go.sum go.sum
 
 # Copy the go source
-COPY main.go main.go
-COPY vendor/ vendor/
-COPY api/ api/
-COPY config/ config/
-COPY controllers/ controllers/
-COPY pkg/ pkg/
+COPY . .
 COPY editors-definitions /tmp/editors-definitions
 
 # build operator
