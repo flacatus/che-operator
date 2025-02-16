@@ -97,7 +97,7 @@ require (
 )
 
 replace (
-	bazil.org/fuse => bazil.org/fuse v0.0.0-20160811212531-371fbbdaa898
+	bazil.org/fuse => bazil.org/fuse v0.0.0-20230120002735-62a210ff1fd5
 	cloud.google.com/go => cloud.google.com/go v0.54.0
 	cloud.google.com/go/bigquery => cloud.google.com/go/bigquery v1.4.0
 	cloud.google.com/go/datastore => cloud.google.com/go/datastore v1.2.0
