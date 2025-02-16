@@ -196,7 +196,7 @@ github.com/sirupsen/logrus
 # github.com/spf13/pflag v1.0.5 => github.com/spf13/pflag v1.0.5
 ## explicit; go 1.12
 github.com/spf13/pflag
-# github.com/stretchr/testify v1.8.4 => github.com/stretchr/testify v1.4.0
+# github.com/stretchr/testify v1.9.0 => github.com/stretchr/testify v1.4.0
 ## explicit
 github.com/stretchr/testify/assert
 # go.uber.org/atomic v1.7.0 => go.uber.org/atomic v1.7.0
@@ -850,7 +850,7 @@ sigs.k8s.io/yaml
 # github.com/PuerkitoBio/purell => github.com/PuerkitoBio/purell v1.1.1
 # github.com/PuerkitoBio/urlesc => github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2
 # github.com/Shopify/logrus-bugsnag => github.com/Shopify/logrus-bugsnag v0.0.0-20171204204709-577dee27f20d
-# github.com/alecthomas/units => github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4
+# github.com/alecthomas/units => github.com/alecthomas/units v0.0.0-20240927000941-0f3dac36c52b
 # github.com/alessio/shellescape => github.com/alessio/shellescape v1.2.2
 # github.com/antihax/optional => github.com/antihax/optional v0.0.0-20180407024304-ca021399b1a6
 # github.com/armon/circbuf => github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e
