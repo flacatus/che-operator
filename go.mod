@@ -377,7 +377,7 @@ replace (
 	github.com/pbnjay/strptime => github.com/pbnjay/strptime v0.0.0-20140226051138-5c05b0d668c9
 	github.com/pelletier/go-toml => github.com/pelletier/go-toml v1.4.0
 	github.com/peterbourgon/diskv => github.com/peterbourgon/diskv v0.0.0-20180312054125-0646ccaebea1
-	github.com/phayes/freeport => github.com/phayes/freeport v0.0.0-20180830031419-95f893ade6f2
+	github.com/phayes/freeport => github.com/phayes/freeport v0.0.0-20220201140144-74d24b5ae9f5
 	github.com/pierrec/lz4 => github.com/pierrec/lz4 v0.0.0-20180610162716-6b9367c9ff40
 	github.com/pkg/errors => github.com/pkg/errors v0.0.0-20200114194744-614d223910a1
 	github.com/pmezard/go-difflib => github.com/pmezard/go-difflib v1.0.0
