@@ -106,7 +106,7 @@ replace (
 	cloud.google.com/go/spanner => cloud.google.com/go/spanner v1.2.0
 	cloud.google.com/go/storage => cloud.google.com/go/storage v1.5.0
 	git/github/microsoft/go-winio => github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5
-	github.com/Azure/go-ansiterm => github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78
+	github.com/Azure/go-ansiterm => github.com/Azure/go-ansiterm v0.0.0-20250102033503-faa5f7b0171c
 	github.com/Azure/go-autorest => github.com/Azure/go-autorest v0.0.0-20200908233159-fafe600ec8bd
 	github.com/Azure/go-autorest/autorest => github.com/Azure/go-autorest/autorest v0.0.0-20200908233159-fafe600ec8bd
 	github.com/Azure/go-autorest/autorest/adal => github.com/Azure/go-autorest/autorest/adal v0.0.0-20200908233159-fafe600ec8bd
