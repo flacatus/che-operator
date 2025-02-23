@@ -295,7 +295,7 @@ replace (
 	github.com/jackc/chunkreader/v2 => github.com/jackc/chunkreader/v2 v2.0.1
 	github.com/jackc/pgconn => github.com/jackc/pgconn v1.3.2
 	github.com/jackc/pgio => github.com/jackc/pgio v1.0.0
-	github.com/jackc/pgmock => github.com/jackc/pgmock v0.0.0-20190831213851-13a1b77aafa2
+	github.com/jackc/pgmock => github.com/jackc/pgmock v0.0.0-20210724152146-4ad1a8207f65
 	github.com/jackc/pgpassfile => github.com/jackc/pgpassfile v1.0.0
 	github.com/jackc/pgproto3/v2 => github.com/jackc/pgproto3/v2 v2.0.1
 	github.com/jackc/pgtype => github.com/jackc/pgtype v0.0.0-20190828014616-a8802b16cc59
