@@ -260,7 +260,7 @@ replace (
 	github.com/gorilla/mux => github.com/gorilla/mux v1.7.2
 	github.com/gorilla/websocket => github.com/gorilla/websocket v1.4.2
 	github.com/gosuri/uitable => github.com/gosuri/uitable v0.0.4
-	github.com/gregjones/httpcache => github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7
+	github.com/gregjones/httpcache => github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79
 	github.com/grpc-ecosystem/go-grpc-middleware => github.com/grpc-ecosystem/go-grpc-middleware v1.1.0
 	github.com/grpc-ecosystem/go-grpc-prometheus => github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/grpc-ecosystem/grpc-gateway => github.com/grpc-ecosystem/grpc-gateway v1.9.5
