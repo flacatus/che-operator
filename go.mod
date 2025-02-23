@@ -425,7 +425,7 @@ replace (
 	github.com/xeipuuv/gojsonpointer => github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f
 	github.com/xeipuuv/gojsonreference => github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415
 	github.com/xeipuuv/gojsonschema => github.com/xeipuuv/gojsonschema v1.2.0
-	github.com/xiang90/probing => github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2
+	github.com/xiang90/probing => github.com/xiang90/probing v0.0.0-20221125231312-a49e3df8f510
 	github.com/xlab/treeprint => github.com/xlab/treeprint v0.0.0-20181112141820-a009c3971eca
 	github.com/yuin/goldmark => github.com/yuin/goldmark v0.0.0-20200826112251-7b90f04af431
 	github.com/yvasiyarov/go-metrics => github.com/yvasiyarov/go-metrics v0.0.0-20150112132944-c25f46c4b940
