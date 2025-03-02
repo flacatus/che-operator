@@ -138,7 +138,7 @@ replace (
 	github.com/beorn7/perks => github.com/beorn7/perks v1.0.1
 	github.com/bgentry/speakeasy => github.com/bgentry/speakeasy v0.1.0
 	github.com/bitly/go-hostpool => github.com/bitly/go-hostpool v0.0.0-20191224193725-5d3b4dc6ed47
-	github.com/bitly/go-simplejson => github.com/bitly/go-simplejson v0.0.0-20171023175154-0c965951289c
+	github.com/bitly/go-simplejson => github.com/bitly/go-simplejson v0.5.1
 	github.com/bkaradzic/go-lz4 => github.com/bkaradzic/go-lz4 v1.0.0
 	github.com/bketelsen/crypt => github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c
 	github.com/blang/semver => github.com/blang/semver v3.5.1+incompatible
