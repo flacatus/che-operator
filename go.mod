@@ -272,7 +272,7 @@ replace (
 	github.com/hashicorp/go-immutable-radix => github.com/hashicorp/go-immutable-radix v1.0.0
 	github.com/hashicorp/go-msgpack => github.com/hashicorp/go-msgpack v0.5.5
 	github.com/hashicorp/go-multierror => github.com/hashicorp/go-multierror v1.1.1
-	github.com/hashicorp/go-rootcerts => github.com/hashicorp/go-rootcerts v1.0.1
+	github.com/hashicorp/go-rootcerts => github.com/hashicorp/go-rootcerts v1.0.2
 	github.com/hashicorp/go-sockaddr => github.com/hashicorp/go-sockaddr v1.0.0
 	github.com/hashicorp/go-syslog => github.com/hashicorp/go-syslog v1.0.0
 	github.com/hashicorp/go-uuid => github.com/hashicorp/go-uuid v1.0.1
