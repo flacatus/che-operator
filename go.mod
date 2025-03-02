@@ -488,7 +488,7 @@ replace (
 	modernc.org/fileutil => modernc.org/fileutil v1.0.0
 	modernc.org/golex => modernc.org/golex v1.0.0
 	modernc.org/internal => modernc.org/internal v1.0.0
-	modernc.org/lldb => modernc.org/lldb v1.0.0
+	modernc.org/lldb => modernc.org/lldb v1.0.8
 	modernc.org/mathutil => modernc.org/mathutil v1.0.0
 	modernc.org/ql => modernc.org/ql v1.0.0
 	modernc.org/sortutil => modernc.org/sortutil v1.1.0
