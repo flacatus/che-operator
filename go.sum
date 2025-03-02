@@ -675,7 +675,7 @@ github.com/bugsnag/panicwrap v1.2.0/go.mod h1:D/8v3kj0zr8ZAKg1AQ6crr+5VwKN5eIywR
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=
 github.com/cespare/xxhash/v2 v2.2.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
-github.com/chai2010/gettext-go v0.0.0-20160711120539-c6fed771bfd5/go.mod h1:/iP1qXHoty45bqomnu2LM+VVyAEdWN+vtSHGlQgyxbw=
+github.com/chai2010/gettext-go v0.1.0/go.mod h1:PBHWqCsO+bS+OxcVEwt0tCMNOXKykAEfB63RjWDvNvM=
 github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7 h1:E18RJWMhzdbW5C27h4/TgTD5n5I+r43EO+8YJ9/fqRU=
 github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7/go.mod h1:2x0FwJwxUaaKmAHF5+DIq27BmL2d0mkwWOQiXYHmQQM=
 github.com/cloudflare/golz4 v0.0.0-20150217214814-ef862a3cdc58/go.mod h1:EOBUe0h4xcZ5GoxqC5SDxFQ8gwyZPKQoEzownBlhI80=
