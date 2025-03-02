@@ -152,7 +152,7 @@ replace (
 	github.com/chzyer/logex => github.com/chzyer/logex v1.1.10
 	github.com/chzyer/readline => github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e
 	github.com/chzyer/test => github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1
-	github.com/clickhouse/clickhouse-go => github.com/clickhouse/clickhouse-go v1.3.12
+	github.com/clickhouse/clickhouse-go => github.com/clickhouse/clickhouse-go v1.5.4
 	github.com/cloudflare/golz4 => github.com/cloudflare/golz4 v0.0.0-20150217214814-ef862a3cdc58
 	github.com/cncf/udpa/go => github.com/cncf/udpa/go v0.0.0-20200327203949-e8cd3a4bb307
 	github.com/cockroachdb/apd => github.com/cockroachdb/apd v1.1.0
