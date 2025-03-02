@@ -405,7 +405,7 @@ replace (
 	github.com/sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
 	github.com/smartystreets/assertions => github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d
 	github.com/smartystreets/goconvey => github.com/smartystreets/goconvey v1.6.4
-	github.com/soheilhy/cmux => github.com/soheilhy/cmux v0.1.4
+	github.com/soheilhy/cmux => github.com/soheilhy/cmux v0.1.5
 	github.com/spf13/afero => github.com/spf13/afero v1.2.2
 	github.com/spf13/cast => github.com/spf13/cast v1.3.0
 	github.com/spf13/cobra => github.com/spf13/cobra v0.0.0-20190321000552-67fc4837d267
