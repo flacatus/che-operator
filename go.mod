@@ -228,7 +228,7 @@ replace (
 	github.com/go-sql-driver/mysql => github.com/go-sql-driver/mysql v1.4.1
 	github.com/go-stack/stack => github.com/go-stack/stack v1.8.0
 	github.com/gobuffalo/flect => github.com/gobuffalo/flect v0.1.0
-	github.com/gobuffalo/here => github.com/gobuffalo/here v0.6.0
+	github.com/gobuffalo/here => github.com/gobuffalo/here v0.6.7
 	github.com/gobwas/glob => github.com/gobwas/glob v0.2.3
 	github.com/goccy/go-yaml => github.com/goccy/go-yaml v1.8.1
 	github.com/gocql/gocql => github.com/gocql/gocql v0.0.0-20190301043612-f6df8288f9b4
