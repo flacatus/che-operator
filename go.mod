@@ -240,7 +240,7 @@ replace (
 	github.com/golang/glog => github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/groupcache => github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 	github.com/golang/protobuf => github.com/golang/protobuf v1.4.3
-	github.com/golang/snappy => github.com/golang/snappy v0.0.1
+	github.com/golang/snappy => github.com/golang/snappy v0.0.4
 	github.com/golangplus/bytes => github.com/golangplus/bytes v0.0.0-20160111154220-45c989fe5450
 	github.com/golangplus/fmt => github.com/golangplus/fmt v0.0.0-20150411045040-2a5d6d7d2995
 	github.com/google/btree => github.com/google/btree v1.0.0
