@@ -346,7 +346,7 @@ replace (
 	github.com/mitchellh/hashstructure => github.com/mitchellh/hashstructure v1.0.0
 	github.com/mitchellh/iochan => github.com/mitchellh/iochan v1.0.0
 	github.com/mitchellh/mapstructure => github.com/mitchellh/mapstructure v1.1.2
-	github.com/mitchellh/reflectwalk => github.com/mitchellh/reflectwalk v1.0.1
+	github.com/mitchellh/reflectwalk => github.com/mitchellh/reflectwalk v1.0.2
 	github.com/moby/spdystream => github.com/moby/spdystream v0.2.0
 	github.com/moby/term => github.com/moby/term v0.0.0-20201216013528-df9cb8a40635
 	github.com/modern-go/concurrent => github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
