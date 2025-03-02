@@ -144,7 +144,7 @@ replace (
 	github.com/blang/semver => github.com/blang/semver v3.5.1+incompatible
 	github.com/blang/semver/v4 => github.com/blang/semver/v4 v4.0.0
 	github.com/bshuster-repo/logrus-logstash-hook => github.com/bshuster-repo/logrus-logstash-hook v1.0.0
-	github.com/bugsnag/bugsnag-go => github.com/bugsnag/bugsnag-go v1.5.3
+	github.com/bugsnag/bugsnag-go => github.com/bugsnag/bugsnag-go v1.9.1
 	github.com/bugsnag/panicwrap => github.com/bugsnag/panicwrap v1.2.0
 	github.com/census-instrumentation/opencensus-proto => github.com/census-instrumentation/opencensus-proto v0.2.1
 	github.com/cespare/xxhash/v2 => github.com/cespare/xxhash/v2 v2.2.0
