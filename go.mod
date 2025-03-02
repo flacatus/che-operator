@@ -130,7 +130,7 @@ replace (
 	github.com/alessio/shellescape => github.com/alessio/shellescape v1.2.2
 	github.com/antihax/optional => github.com/antihax/optional v0.0.0-20180407024304-ca021399b1a6
 	github.com/armon/circbuf => github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e
-	github.com/armon/go-metrics => github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da
+	github.com/armon/go-metrics => github.com/armon/go-metrics v0.5.4
 	github.com/armon/go-radix => github.com/armon/go-radix v0.0.0-20180808171621-7fddfc383310
 	github.com/asaskevich/govalidator => github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a
 	github.com/aws/aws-sdk-go => github.com/aws/aws-sdk-go v0.0.0-20210122191723-2c7b39c8f2e2
