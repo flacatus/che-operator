@@ -207,7 +207,7 @@ replace (
 	github.com/fsnotify/fsnotify => github.com/fsnotify/fsnotify v1.4.7
 	github.com/fsouza/fake-gcs-server => github.com/fsouza/fake-gcs-server v1.17.0
 	github.com/fvbommel/sortorder => github.com/fvbommel/sortorder v1.0.1
-	github.com/garyburd/redigo => github.com/garyburd/redigo v1.6.0
+	github.com/garyburd/redigo => github.com/garyburd/redigo v1.6.4
 	github.com/ghodss/yaml => github.com/ghodss/yaml v0.0.0-20150909031657-73d445a93680
 	github.com/globalsign/mgo => github.com/globalsign/mgo v0.0.0-20160323214708-72aab81a5dec
 	github.com/go-bindata/go-bindata/v3 => github.com/go-bindata/go-bindata/v3 v3.1.3
