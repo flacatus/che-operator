@@ -149,7 +149,7 @@ replace (
 	github.com/census-instrumentation/opencensus-proto => github.com/census-instrumentation/opencensus-proto v0.2.1
 	github.com/cespare/xxhash/v2 => github.com/cespare/xxhash/v2 v2.2.0
 	github.com/chai2010/gettext-go => github.com/chai2010/gettext-go v0.0.0-20160711120539-c6fed771bfd5
-	github.com/chzyer/logex => github.com/chzyer/logex v1.1.10
+	github.com/chzyer/logex => github.com/chzyer/logex v1.2.1
 	github.com/chzyer/readline => github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e
 	github.com/chzyer/test => github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1
 	github.com/clickhouse/clickhouse-go => github.com/clickhouse/clickhouse-go v1.3.12
