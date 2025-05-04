@@ -3,7 +3,7 @@ module github.com/eclipse-che/che-operator
 go 1.19
 
 require (
-	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
+	github.com/che-incubator/kubernetes-image-puller-operator 65e5ec32f521
 	github.com/devfile/api/v2 v2.2.2
 	github.com/devfile/devworkspace-operator v0.31.0
 	github.com/go-logr/logr v1.2.4
