@@ -163,40 +163,40 @@ spec:
       - name: basic-auth
         workspace: git-auth
     - name: sealights-instrumentation
-      runAfter:
-        - clone-repository
-      taskRef:
-        resolver: git
-        params:
-          - name: url
-            value: https://github.com/flacatus/tekton-integration-catalog.git
-          - name: revision
-            value: go-sealights
-          - name: pathInRepo
-            value: tasks/sealights/sealights-go-instrumentation/0.1/sealights-go-instrumentation.yaml
       params:
-        - name: source-artifact
-          value: $(tasks.clone-repository.results.SOURCE_ARTIFACT)
-        - name: go-version
-          value: "1.22"
-        - name: sealights-secret
-          value: "sealights-credentials"
-        - name: component
-          value: '{{ repo_name }}'
-        - name: branch
-          value: '{{ source_branch }}'
+      - name: source-artifact
+        value: $(tasks.clone-repository.results.SOURCE_ARTIFACT)
+      - name: go-version
+        value: "1.22"
+      - name: sealights-secret
+        value: sealights-credentials
+      - name: component
+        value: '{{ repo_name }}'
+      - name: branch
+        value: '{{ source_branch }}'
+      - name: revision
+        value: '{{ revision }}'
+      - name: repository-url
+        value: '{{ repo_url }}'
+      - name: pull-request-number
+        value: '{{ pull_request_number }}'
+      - name: target-branch
+        value: '{{ target_branch }}'
+      - name: test-event
+        value: '{{ event_type }}'
+      - name: oci-storage
+        value: $(params.output-image).sealights.git
+      runAfter:
+      - clone-repository
+      taskRef:
+        params:
+        - name: url
+          value: https://github.com/flacatus/tekton-integration-catalog.git
         - name: revision
-          value: '{{ revision }}'
-        - name: repository-url
-          value: '{{ repo_url }}'
-        - name: pull-request-number
-          value: '{{ pull_request_number }}'
-        - name: target-branch
-          value: '{{ target_branch }}'
-        - name: test-event
-          value: '{{ event_type }}'
-        - name: oci-storage
-          value: $(params.output-image).sealights.git
+          value: go-sealights
+        - name: pathInRepo
+          value: tasks/sealights/sealights-go-instrumentation/0.1/sealights-go-instrumentation.yaml
+        resolver: git
     - name: prefetch-dependencies
       params:
       - name: input
@@ -645,7 +645,8 @@ spec:
       optional: true
     - name: netrc
       optional: true
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-che-operator
   workspaces:
   - name: git-auth
     secret:
