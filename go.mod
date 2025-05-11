@@ -280,7 +280,7 @@ replace (
 	github.com/hashicorp/golang-lru => github.com/hashicorp/golang-lru v0.5.1
 	github.com/hashicorp/hcl => github.com/hashicorp/hcl v1.0.0
 	github.com/hashicorp/logutils => github.com/hashicorp/logutils v1.0.0
-	github.com/hashicorp/mdns => github.com/hashicorp/mdns v1.0.0
+	github.com/hashicorp/mdns => github.com/hashicorp/mdns v1.0.6
 	github.com/hashicorp/memberlist => github.com/hashicorp/memberlist v0.1.3
 	github.com/hashicorp/serf => github.com/hashicorp/serf v0.8.2
 	github.com/hokaccha/go-prettyjson => github.com/hokaccha/go-prettyjson v0.0.0-20190818114111-108c894c2c0e
