@@ -44,7 +44,7 @@ require (
 	github.com/google/gnostic v0.5.7-v3refs // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/imdario/mergo v0.3.13 // indirect
+	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.6 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2 // indirect
@@ -286,7 +286,7 @@ replace (
 	github.com/hokaccha/go-prettyjson => github.com/hokaccha/go-prettyjson v0.0.0-20190818114111-108c894c2c0e
 	github.com/hpcloud/tail => github.com/hpcloud/tail v1.0.0
 	github.com/huandu/xstrings => github.com/huandu/xstrings v1.2.0
-	github.com/imdario/mergo => github.com/imdario/mergo v0.3.5
+	github.com/imdario/mergo => github.com/imdario/mergo v0.3.16
 	github.com/inconshreveable/mousetrap => github.com/inconshreveable/mousetrap v1.0.0
 	github.com/irifrance/gini => github.com/go-air/gini v1.0.1
 	github.com/itchyny/astgen-go => github.com/itchyny/astgen-go v0.0.0-20200519013840-cf3ea398f645
