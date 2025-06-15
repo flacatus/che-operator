@@ -127,7 +127,7 @@ replace (
 	github.com/PuerkitoBio/urlesc => github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2
 	github.com/Shopify/logrus-bugsnag => github.com/Shopify/logrus-bugsnag v0.0.0-20171204204709-577dee27f20d
 	github.com/alecthomas/units => github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4
-	github.com/alessio/shellescape => github.com/alessio/shellescape v1.2.2
+	github.com/alessio/shellescape => github.com/alessio/shellescape v1.6.0
 	github.com/antihax/optional => github.com/antihax/optional v0.0.0-20180407024304-ca021399b1a6
 	github.com/armon/circbuf => github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e
 	github.com/armon/go-metrics => github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da
