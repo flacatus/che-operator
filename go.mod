@@ -86,7 +86,7 @@ require (
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/Shopify/logrus-bugsnag v0.0.0-00010101000000-000000000000 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
+	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
 	go.uber.org/tools v0.0.0-20190618225709-2cfd321de3ee // indirect
 	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
 	golang.org/x/mod v0.12.0 // indirect
@@ -314,7 +314,7 @@ replace (
 	github.com/kardianos/osext => github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0
 	github.com/kisielk/errcheck => github.com/kisielk/errcheck v1.2.0
 	github.com/kisielk/gotool => github.com/kisielk/gotool v1.0.0
-	github.com/konsorten/go-windows-terminal-sequences => github.com/konsorten/go-windows-terminal-sequences v1.0.1
+	github.com/konsorten/go-windows-terminal-sequences => github.com/konsorten/go-windows-terminal-sequences v1.0.3
 	github.com/kr/pretty => github.com/kr/pretty v0.0.0-20200729040243-ead452280cd0
 	github.com/kr/pty => github.com/kr/pty v0.0.0-20180113180813-282ce0e5322c
 	github.com/kr/text => github.com/kr/text v0.2.0
