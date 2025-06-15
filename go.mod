@@ -82,7 +82,7 @@ require (
 )
 
 require (
-	github.com/BurntSushi/toml v0.3.1 // indirect
+	github.com/BurntSushi/toml v0.4.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/Shopify/logrus-bugsnag v0.0.0-00010101000000-000000000000 // indirect
@@ -114,7 +114,7 @@ replace (
 	github.com/Azure/go-autorest/autorest/mocks => github.com/Azure/go-autorest/autorest/mocks v0.0.0-20200908233159-fafe600ec8bd
 	github.com/Azure/go-autorest/logger => github.com/Azure/go-autorest/logger v0.0.0-20200908233159-fafe600ec8bd
 	github.com/Azure/go-autorest/tracing => github.com/Azure/go-autorest/tracing v0.0.0-20200908233159-fafe600ec8bd
-	github.com/BurntSushi/toml => github.com/BurntSushi/toml v0.3.1
+	github.com/BurntSushi/toml => github.com/BurntSushi/toml v0.4.1
 	github.com/BurntSushi/xgb => github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802
 	github.com/MakeNowJust/heredoc => github.com/MakeNowJust/heredoc v0.0.0-20171113091838-e9091a26100e
 	github.com/Masterminds/goutils => github.com/Masterminds/goutils v1.1.0
