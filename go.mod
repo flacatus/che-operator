@@ -325,7 +325,7 @@ replace (
 	github.com/lib/pq => github.com/lib/pq v0.0.0-20190415174712-51e2106eed1c
 	github.com/liggitt/tabwriter => github.com/liggitt/tabwriter v0.0.0-20181228230101-89fcab3d43de
 	github.com/lithammer/dedent => github.com/lithammer/dedent v1.1.0
-	github.com/magiconair/properties => github.com/magiconair/properties v1.8.1
+	github.com/magiconair/properties => github.com/magiconair/properties v1.8.10
 	github.com/mailru/easyjson => github.com/mailru/easyjson v0.0.0-20200218084223-8edcc4e51f39
 	github.com/markbates/pkger => github.com/markbates/pkger v0.17.1
 	github.com/mattn/go-colorable => github.com/mattn/go-colorable v0.1.7
