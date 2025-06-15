@@ -68,7 +68,7 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
-	google.golang.org/appengine v1.6.7 // indirect
+	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/grpc v1.58.3 // indirect
 	google.golang.org/protobuf v1.34.1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
@@ -447,7 +447,7 @@ replace (
 	golang.org/x/oauth2 => golang.org/x/oauth2 v0.10.0
 	gomodules.xyz/jsonpatch/v2 => gomodules.xyz/jsonpatch/v2 v2.0.1
 	google.golang.org/api => google.golang.org/api v0.20.0
-	google.golang.org/appengine => google.golang.org/appengine v1.6.5
+	google.golang.org/appengine => google.golang.org/appengine v1.6.8
 	google.golang.org/cloud => cloud.google.com/go v0.0.0-20200305180117-a6b88cf34a49
 	google.golang.org/genproto/googleapis/rpc => google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
 	google.golang.org/grpc => google.golang.org/grpc v1.58.3
