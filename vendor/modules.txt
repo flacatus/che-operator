@@ -18,7 +18,7 @@ github.com/blang/semver
 # github.com/blang/semver/v4 v4.0.0 => github.com/blang/semver/v4 v4.0.0
 ## explicit; go 1.14
 github.com/blang/semver/v4
-# github.com/cespare/xxhash/v2 v2.2.0 => github.com/cespare/xxhash/v2 v2.2.0
+# github.com/cespare/xxhash/v2 v2.3.0 => github.com/cespare/xxhash/v2 v2.3.0
 ## explicit; go 1.11
 github.com/cespare/xxhash/v2
 # github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -871,7 +871,7 @@ sigs.k8s.io/yaml
 # github.com/bugsnag/bugsnag-go => github.com/bugsnag/bugsnag-go v1.5.3
 # github.com/bugsnag/panicwrap => github.com/bugsnag/panicwrap v1.2.0
 # github.com/census-instrumentation/opencensus-proto => github.com/census-instrumentation/opencensus-proto v0.2.1
-# github.com/cespare/xxhash/v2 => github.com/cespare/xxhash/v2 v2.2.0
+# github.com/cespare/xxhash/v2 => github.com/cespare/xxhash/v2 v2.3.0
 # github.com/chai2010/gettext-go => github.com/chai2010/gettext-go v0.0.0-20160711120539-c6fed771bfd5
 # github.com/chzyer/logex => github.com/chzyer/logex v1.1.10
 # github.com/chzyer/readline => github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e
