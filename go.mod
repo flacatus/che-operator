@@ -243,7 +243,7 @@ replace (
 	github.com/golang/snappy => github.com/golang/snappy v0.0.1
 	github.com/golangplus/bytes => github.com/golangplus/bytes v0.0.0-20160111154220-45c989fe5450
 	github.com/golangplus/fmt => github.com/golangplus/fmt v0.0.0-20150411045040-2a5d6d7d2995
-	github.com/google/btree => github.com/google/btree v1.0.0
+	github.com/google/btree => github.com/google/btree v1.1.3
 	github.com/google/go-cmp => github.com/google/go-cmp v0.5.6
 	github.com/google/go-github => github.com/google/go-github/v18 v18.0.0-20180920013327-07716bad7a0c
 	github.com/google/go-querystring => github.com/google/go-querystring v1.0.0
