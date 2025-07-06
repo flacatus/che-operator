@@ -43,7 +43,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/gnostic v0.5.7-v3refs // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
-	github.com/google/uuid v1.3.0 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.6 // indirect
@@ -251,7 +251,7 @@ replace (
 	github.com/google/martian => github.com/google/martian v0.0.0-20180813215018-c223d6f7955e
 	github.com/google/pprof => github.com/google/pprof v0.0.0-20180921154107-7dadf64105bb
 	github.com/google/renameio => github.com/google/renameio v0.1.0
-	github.com/google/uuid => github.com/google/uuid v1.3.0
+	github.com/google/uuid => github.com/google/uuid v1.6.0
 	github.com/googleapis/gax-go/v2 => github.com/googleapis/gax-go/v2 v2.0.5
 	github.com/googleapis/gnostic => github.com/googleapis/gnostic v0.4.2
 	github.com/gopherjs/gopherjs => github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00
