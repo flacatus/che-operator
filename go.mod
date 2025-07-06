@@ -213,7 +213,7 @@ replace (
 	github.com/go-bindata/go-bindata/v3 => github.com/go-bindata/go-bindata/v3 v3.1.3
 	github.com/go-errors/errors => github.com/go-errors/errors v1.0.1
 	github.com/go-ini/ini => github.com/go-ini/ini v1.25.4
-	github.com/go-kit/log => github.com/go-kit/log v0.1.0
+	github.com/go-kit/log => github.com/go-kit/log v0.2.1
 	github.com/go-logfmt/logfmt => github.com/go-logfmt/logfmt v0.5.0
 	github.com/go-openapi/errors => github.com/go-openapi/errors v0.19.2
 	github.com/go-openapi/jsonpointer => github.com/go-openapi/jsonpointer v0.19.3
