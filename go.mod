@@ -234,7 +234,7 @@ replace (
 	github.com/gocql/gocql => github.com/gocql/gocql v0.0.0-20190301043612-f6df8288f9b4
 	github.com/godbus/dbus => github.com/godbus/dbus v0.0.0-20190422162347-ade71ed3457e
 	github.com/gofrs/flock => github.com/gofrs/flock v0.7.1
-	github.com/gofrs/uuid => github.com/gofrs/uuid v3.2.0+incompatible
+	github.com/gofrs/uuid => github.com/gofrs/uuid v3.4.0+incompatible
 	github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 	github.com/golang-migrate/migrate/v4 => github.com/golang-migrate/migrate/v4 v4.10.0
 	github.com/golang/glog => github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
