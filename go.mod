@@ -211,7 +211,7 @@ replace (
 	github.com/ghodss/yaml => github.com/ghodss/yaml v0.0.0-20150909031657-73d445a93680
 	github.com/globalsign/mgo => github.com/globalsign/mgo v0.0.0-20160323214708-72aab81a5dec
 	github.com/go-bindata/go-bindata/v3 => github.com/go-bindata/go-bindata/v3 v3.1.3
-	github.com/go-errors/errors => github.com/go-errors/errors v1.0.1
+	github.com/go-errors/errors => github.com/go-errors/errors v1.5.1
 	github.com/go-ini/ini => github.com/go-ini/ini v1.25.4
 	github.com/go-kit/log => github.com/go-kit/log v0.1.0
 	github.com/go-logfmt/logfmt => github.com/go-logfmt/logfmt v0.5.0
