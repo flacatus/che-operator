@@ -182,7 +182,7 @@ replace (
 	github.com/dgrijalva/jwt-go => github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/docker/cli => github.com/docker/cli v0.0.0-20200130152716-5d0cf8839492
 	github.com/docker/distribution => github.com/docker/distribution v2.7.1+incompatible
-	github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309
+	github.com/docker/docker => github.com/moby/moby v0.12.0
 	github.com/docker/docker-credential-helpers => github.com/docker/docker-credential-helpers v0.6.3
 	github.com/docker/go-connections => github.com/docker/go-connections v0.4.0
 	github.com/docker/go-events => github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c
