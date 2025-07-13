@@ -256,7 +256,7 @@ replace (
 	github.com/googleapis/gnostic => github.com/googleapis/gnostic v0.4.2
 	github.com/gopherjs/gopherjs => github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00
 	github.com/gorilla/context => github.com/gorilla/context v1.1.1
-	github.com/gorilla/handlers => github.com/gorilla/handlers v1.4.2
+	github.com/gorilla/handlers => github.com/gorilla/handlers v1.5.2
 	github.com/gorilla/mux => github.com/gorilla/mux v1.7.2
 	github.com/gorilla/websocket => github.com/gorilla/websocket v1.4.2
 	github.com/gosuri/uitable => github.com/gosuri/uitable v0.0.4
