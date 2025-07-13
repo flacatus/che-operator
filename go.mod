@@ -315,7 +315,7 @@ replace (
 	github.com/kisielk/errcheck => github.com/kisielk/errcheck v1.2.0
 	github.com/kisielk/gotool => github.com/kisielk/gotool v1.0.0
 	github.com/konsorten/go-windows-terminal-sequences => github.com/konsorten/go-windows-terminal-sequences v1.0.1
-	github.com/kr/pretty => github.com/kr/pretty v0.0.0-20200729040243-ead452280cd0
+	github.com/kr/pretty => github.com/kr/pretty v0.3.1
 	github.com/kr/pty => github.com/kr/pty v0.0.0-20180113180813-282ce0e5322c
 	github.com/kr/text => github.com/kr/text v0.2.0
 	github.com/kylelemons/godebug => github.com/kylelemons/godebug v1.1.0
