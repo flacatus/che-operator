@@ -299,7 +299,7 @@ replace (
 	github.com/jackc/pgpassfile => github.com/jackc/pgpassfile v1.0.0
 	github.com/jackc/pgproto3/v2 => github.com/jackc/pgproto3/v2 v2.0.1
 	github.com/jackc/pgtype => github.com/jackc/pgtype v0.0.0-20190828014616-a8802b16cc59
-	github.com/jackc/pgx/v4 => github.com/jackc/pgx/v4 v4.0.0-pre1.0.20190824185557-6972a5742186
+	github.com/jackc/pgx/v4 => github.com/jackc/pgx/v4 v4.18.3
 	github.com/jackc/puddle => github.com/jackc/puddle v0.0.0-20190608224051-11cab39313c9
 	github.com/jehiah/go-strftime => github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869
 	github.com/jessevdk/go-flags => github.com/jessevdk/go-flags v1.4.0
