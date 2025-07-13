@@ -293,7 +293,7 @@ replace (
 	github.com/itchyny/go-flags => github.com/itchyny/go-flags v1.5.0
 	github.com/itchyny/gojq => github.com/itchyny/gojq v0.11.0
 	github.com/jackc/chunkreader/v2 => github.com/jackc/chunkreader/v2 v2.0.1
-	github.com/jackc/pgconn => github.com/jackc/pgconn v1.3.2
+	github.com/jackc/pgconn => github.com/jackc/pgconn v1.14.3
 	github.com/jackc/pgio => github.com/jackc/pgio v1.0.0
 	github.com/jackc/pgmock => github.com/jackc/pgmock v0.0.0-20190831213851-13a1b77aafa2
 	github.com/jackc/pgpassfile => github.com/jackc/pgpassfile v1.0.0
