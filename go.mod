@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.21.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -302,7 +302,7 @@ replace (
 	github.com/jackc/pgx/v4 => github.com/jackc/pgx/v4 v4.0.0-pre1.0.20190824185557-6972a5742186
 	github.com/jackc/puddle => github.com/jackc/puddle v0.0.0-20190608224051-11cab39313c9
 	github.com/jehiah/go-strftime => github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869
-	github.com/jessevdk/go-flags => github.com/jessevdk/go-flags v1.4.0
+	github.com/jessevdk/go-flags => github.com/jessevdk/go-flags v1.6.1
 	github.com/jmespath/go-jmespath => github.com/jmespath/go-jmespath v0.3.0
 	github.com/joefitzgerald/rainbow-reporter => github.com/joefitzgerald/rainbow-reporter v0.1.0
 	github.com/jonboulle/clockwork => github.com/jonboulle/clockwork v0.1.0
