@@ -257,7 +257,7 @@ replace (
 	github.com/gopherjs/gopherjs => github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00
 	github.com/gorilla/context => github.com/gorilla/context v1.1.1
 	github.com/gorilla/handlers => github.com/gorilla/handlers v1.4.2
-	github.com/gorilla/mux => github.com/gorilla/mux v1.7.2
+	github.com/gorilla/mux => github.com/gorilla/mux v1.8.1
 	github.com/gorilla/websocket => github.com/gorilla/websocket v1.4.2
 	github.com/gosuri/uitable => github.com/gosuri/uitable v0.0.4
 	github.com/gregjones/httpcache => github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7
