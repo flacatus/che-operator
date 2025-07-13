@@ -287,7 +287,7 @@ replace (
 	github.com/hpcloud/tail => github.com/hpcloud/tail v1.0.0
 	github.com/huandu/xstrings => github.com/huandu/xstrings v1.2.0
 	github.com/imdario/mergo => github.com/imdario/mergo v0.3.5
-	github.com/inconshreveable/mousetrap => github.com/inconshreveable/mousetrap v1.0.0
+	github.com/inconshreveable/mousetrap => github.com/inconshreveable/mousetrap v1.1.0
 	github.com/irifrance/gini => github.com/go-air/gini v1.0.1
 	github.com/itchyny/astgen-go => github.com/itchyny/astgen-go v0.0.0-20200519013840-cf3ea398f645
 	github.com/itchyny/go-flags => github.com/itchyny/go-flags v1.5.0
