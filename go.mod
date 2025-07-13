@@ -297,7 +297,7 @@ replace (
 	github.com/jackc/pgio => github.com/jackc/pgio v1.0.0
 	github.com/jackc/pgmock => github.com/jackc/pgmock v0.0.0-20190831213851-13a1b77aafa2
 	github.com/jackc/pgpassfile => github.com/jackc/pgpassfile v1.0.0
-	github.com/jackc/pgproto3/v2 => github.com/jackc/pgproto3/v2 v2.0.1
+	github.com/jackc/pgproto3/v2 => github.com/jackc/pgproto3/v2 v2.3.3
 	github.com/jackc/pgtype => github.com/jackc/pgtype v0.0.0-20190828014616-a8802b16cc59
 	github.com/jackc/pgx/v4 => github.com/jackc/pgx/v4 v4.0.0-pre1.0.20190824185557-6972a5742186
 	github.com/jackc/puddle => github.com/jackc/puddle v0.0.0-20190608224051-11cab39313c9
