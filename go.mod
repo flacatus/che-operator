@@ -340,7 +340,7 @@ replace (
 	github.com/mitchellh/cli => github.com/mitchellh/cli v1.0.0
 	github.com/mitchellh/copystructure => github.com/mitchellh/copystructure v1.0.0
 	github.com/mitchellh/go-homedir => github.com/mitchellh/go-homedir v1.1.0
-	github.com/mitchellh/go-testing-interface => github.com/mitchellh/go-testing-interface v1.0.0
+	github.com/mitchellh/go-testing-interface => github.com/mitchellh/go-testing-interface v1.14.1
 	github.com/mitchellh/go-wordwrap => github.com/mitchellh/go-wordwrap v1.0.0
 	github.com/mitchellh/gox => github.com/mitchellh/gox v0.4.0
 	github.com/mitchellh/hashstructure => github.com/mitchellh/hashstructure v1.0.0
