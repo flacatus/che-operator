@@ -393,7 +393,7 @@ replace (
 	github.com/rogpeppe/go-internal => github.com/rogpeppe/go-internal v1.3.0
 	github.com/rs/xid => github.com/rs/xid v1.2.1
 	github.com/rs/zerolog => github.com/rs/zerolog v1.15.0
-	github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
+	github.com/russross/blackfriday => github.com/russross/blackfriday v1.6.0
 	github.com/ryanuber/columnize => github.com/ryanuber/columnize v0.0.0-20160712163229-9b3edd62028f
 	github.com/satori/go.uuid => github.com/satori/go.uuid v1.2.0
 	github.com/sclevine/spec => github.com/sclevine/spec v1.2.0
