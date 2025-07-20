@@ -396,7 +396,7 @@ replace (
 	github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
 	github.com/ryanuber/columnize => github.com/ryanuber/columnize v0.0.0-20160712163229-9b3edd62028f
 	github.com/satori/go.uuid => github.com/satori/go.uuid v1.2.0
-	github.com/sclevine/spec => github.com/sclevine/spec v1.2.0
+	github.com/sclevine/spec => github.com/sclevine/spec v1.4.0
 	github.com/scylladb/go-set => github.com/scylladb/go-set v1.0.2
 	github.com/sean-/seed => github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529
 	github.com/sergi/go-diff => github.com/sergi/go-diff v1.0.0
