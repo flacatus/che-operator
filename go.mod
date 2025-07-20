@@ -381,7 +381,7 @@ replace (
 	github.com/pierrec/lz4 => github.com/pierrec/lz4 v0.0.0-20180610162716-6b9367c9ff40
 	github.com/pkg/errors => github.com/pkg/errors v0.0.0-20200114194744-614d223910a1
 	github.com/pmezard/go-difflib => github.com/pmezard/go-difflib v1.0.0
-	github.com/posener/complete => github.com/posener/complete v1.1.1
+	github.com/posener/complete => github.com/posener/complete v1.2.3
 	github.com/pquerna/cachecontrol => github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021
 	github.com/prometheus/client_golang => github.com/prometheus/client_golang v1.14.0
 	github.com/prometheus/client_model => github.com/prometheus/client_model v0.3.0
