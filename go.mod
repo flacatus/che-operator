@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.20.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -419,7 +419,7 @@ replace (
 	github.com/tidwall/pretty => github.com/tidwall/pretty v0.0.0-20200828150932-ef453c788d6a
 	github.com/tmc/grpc-websocket-proxy => github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5
 	github.com/urfave/cli => github.com/urfave/cli v1.2.0
-	github.com/xanzy/go-gitlab => github.com/xanzy/go-gitlab v0.15.0
+	github.com/xanzy/go-gitlab => github.com/xanzy/go-gitlab v0.115.0
 	github.com/xdg/scram => github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c
 	github.com/xdg/stringprep => github.com/xdg/stringprep v1.0.0
 	github.com/xeipuuv/gojsonpointer => github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f
