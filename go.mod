@@ -399,7 +399,7 @@ replace (
 	github.com/sclevine/spec => github.com/sclevine/spec v1.2.0
 	github.com/scylladb/go-set => github.com/scylladb/go-set v1.0.2
 	github.com/sean-/seed => github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529
-	github.com/sergi/go-diff => github.com/sergi/go-diff v1.0.0
+	github.com/sergi/go-diff => github.com/sergi/go-diff v1.4.0
 	github.com/shopspring/decimal => github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24
 	github.com/shurcooL/sanitized_anchor_name => github.com/shurcooL/sanitized_anchor_name v1.0.0
 	github.com/sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
