@@ -286,8 +286,8 @@ golang.org/x/tools/internal/typesinternal
 ## explicit; go 1.17
 golang.org/x/xerrors
 golang.org/x/xerrors/internal
-# gomodules.xyz/jsonpatch/v2 v2.2.0 => gomodules.xyz/jsonpatch/v2 v2.0.1
-## explicit; go 1.12
+# gomodules.xyz/jsonpatch/v2 v2.5.0 => gomodules.xyz/jsonpatch/v2 v2.5.0
+## explicit; go 1.20
 gomodules.xyz/jsonpatch/v2
 # google.golang.org/appengine v1.6.7 => google.golang.org/appengine v1.6.5
 ## explicit; go 1.11
@@ -1169,7 +1169,7 @@ sigs.k8s.io/yaml
 # golang.org/x/crypto => golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83
 # golang.org/x/exp => golang.org/x/exp v0.0.0-20190426190305-956cc1757749
 # golang.org/x/oauth2 => golang.org/x/oauth2 v0.10.0
-# gomodules.xyz/jsonpatch/v2 => gomodules.xyz/jsonpatch/v2 v2.0.1
+# gomodules.xyz/jsonpatch/v2 => gomodules.xyz/jsonpatch/v2 v2.5.0
 # google.golang.org/api => google.golang.org/api v0.20.0
 # google.golang.org/appengine => google.golang.org/appengine v1.6.5
 # google.golang.org/cloud => cloud.google.com/go v0.0.0-20200305180117-a6b88cf34a49
