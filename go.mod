@@ -414,7 +414,7 @@ replace (
 	github.com/spf13/viper => github.com/spf13/viper v1.7.0
 	github.com/stretchr/objx => github.com/stretchr/objx v0.3.0
 	github.com/stretchr/testify => github.com/stretchr/testify v1.4.0
-	github.com/subosito/gotenv => github.com/subosito/gotenv v1.2.0
+	github.com/subosito/gotenv => github.com/subosito/gotenv v1.6.0
 	github.com/tebeka/strftime => github.com/tebeka/strftime v0.1.3
 	github.com/tidwall/pretty => github.com/tidwall/pretty v0.0.0-20200828150932-ef453c788d6a
 	github.com/tmc/grpc-websocket-proxy => github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5
