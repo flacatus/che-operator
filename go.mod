@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.24.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -370,7 +370,7 @@ replace (
 	github.com/openshift/client-go => github.com/openshift/client-go v0.0.0-20200326155132-2a6cd50aedd0
 	github.com/opentracing/opentracing-go => github.com/opentracing/opentracing-go v1.1.0
 	github.com/operator-framework/operator-registry => github.com/operator-framework/operator-registry v1.13.6
-	github.com/otiai10/copy => github.com/otiai10/copy v1.2.0
+	github.com/otiai10/copy => github.com/otiai10/copy v1.14.1
 	github.com/otiai10/curr => github.com/otiai10/curr v1.0.0
 	github.com/otiai10/mint => github.com/otiai10/mint v1.3.1
 	github.com/pascaldekloe/goe => github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c
