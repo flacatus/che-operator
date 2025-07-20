@@ -997,8 +997,7 @@ github.com/operator-framework/operator-lifecycle-manager v0.18.1/go.mod h1:zFexX
 github.com/operator-framework/operator-registry v1.13.6 h1:h/dIjQQS7uneQNRifrSz7h0xg4Xyjg6C9f6XZofbMPg=
 github.com/operator-framework/operator-registry v1.13.6/go.mod h1:YhnIzOVjRU2ZwZtzt+fjcjW8ujJaSFynBEu7QVKaSdU=
 github.com/otiai10/copy v1.2.0/go.mod h1:rrF5dJ5F0t/EWSYODDu4j9/vEeYHMkc8jt0zJChqQWw=
-github.com/otiai10/curr v1.0.0/go.mod h1:LskTG5wDwr8Rs+nNQ+1LlxRjAtTZZjtJW4rMXl6j4vs=
-github.com/otiai10/mint v1.3.1/go.mod h1:/yxELlJQ0ufhjUwhshSj+wFjZ78CnZ48/1wtmBH1OTc=
+github.com/otiai10/mint v1.6.3/go.mod h1:MJm72SBthJjz8qhefc4z1PYEieWmy8Bku7CjcAqyUSM=
 github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c/go.mod h1:lzWF7FIEvWOWxwDKqyGYQf6ZUaNfKdP144TG7ZOy1lc=
 github.com/pbnjay/strptime v0.0.0-20140226051138-5c05b0d668c9/go.mod h1:6Hr+C/olSdkdL3z68MlyXWzwhvwmwN7KuUFXGb3PoOk=
 github.com/pelletier/go-toml v1.4.0/go.mod h1:PN7xzY2wHTK0K9p34ErDQMlFxa51Fk0OUruD3k1mMwo=
