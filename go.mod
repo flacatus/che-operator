@@ -464,7 +464,7 @@ replace (
 	gopkg.in/inconshreveable/log15.v2 => gopkg.in/inconshreveable/log15.v2 v2.0.0-20180818164646-67afb5ed74ec
 	gopkg.in/inf.v0 => gopkg.in/inf.v0 v0.9.1
 	gopkg.in/ini.v1 => gopkg.in/ini.v1 v1.51.0
-	gopkg.in/natefinch/lumberjack.v2 => gopkg.in/natefinch/lumberjack.v2 v2.0.0
+	gopkg.in/natefinch/lumberjack.v2 => gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/op/go-logging.v1 => gopkg.in/op/go-logging.v1 v1.0.0-20160211212156-b2cb9fa56473
 	gopkg.in/resty.v1 => gopkg.in/resty.v1 v1.12.0
 	gopkg.in/square/go-jose.v2 => gopkg.in/square/go-jose.v2 v2.2.2
