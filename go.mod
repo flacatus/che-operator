@@ -196,7 +196,7 @@ replace (
 	github.com/emicklei/go-restful => github.com/emicklei/go-restful v0.0.0-20200129102538-a2fa14558f9a
 	github.com/envoyproxy/go-control-plane => github.com/envoyproxy/go-control-plane v0.0.0-20200213201256-ba8e577f987f
 	github.com/envoyproxy/protoc-gen-validate => github.com/envoyproxy/protoc-gen-validate v0.1.0
-	github.com/evanphx/json-patch => github.com/evanphx/json-patch v4.11.0+incompatible
+	github.com/evanphx/json-patch => github.com/evanphx/json-patch v4.13.0+incompatible
 	github.com/evanphx/json-patch/v5 => github.com/evanphx/json-patch/v5 v5.1.0
 	github.com/exponent-io/jsonpath => github.com/exponent-io/jsonpath v0.0.0-20151013193312-d6023ce2651d
 	github.com/fastly/go-utils => github.com/fastly/go-utils v0.0.0-20180712184237-d95a45783239
