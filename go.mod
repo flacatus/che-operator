@@ -12,7 +12,7 @@ require (
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
 	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.10.0
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.23.0
 	k8s.io/api v0.26.1
@@ -137,7 +137,7 @@ replace (
 	github.com/benbjohnson/clock => github.com/benbjohnson/clock v1.1.0
 	github.com/beorn7/perks => github.com/beorn7/perks v1.0.1
 	github.com/bgentry/speakeasy => github.com/bgentry/speakeasy v0.1.0
-	github.com/bitly/go-hostpool => github.com/bitly/go-hostpool v0.0.0-20191224193725-5d3b4dc6ed47
+	github.com/bitly/go-hostpool => github.com/bitly/go-hostpool v0.1.1
 	github.com/bitly/go-simplejson => github.com/bitly/go-simplejson v0.0.0-20171023175154-0c965951289c
 	github.com/bkaradzic/go-lz4 => github.com/bkaradzic/go-lz4 v1.0.0
 	github.com/bketelsen/crypt => github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c
