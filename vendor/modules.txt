@@ -45,7 +45,7 @@ github.com/devfile/devworkspace-operator/pkg/config/proxy
 github.com/devfile/devworkspace-operator/pkg/constants
 github.com/devfile/devworkspace-operator/pkg/infrastructure
 github.com/devfile/devworkspace-operator/pkg/provision/sync
-# github.com/emicklei/go-restful/v3 v3.9.0
+# github.com/emicklei/go-restful/v3 v3.13.0
 ## explicit; go 1.13
 github.com/emicklei/go-restful/v3
 github.com/emicklei/go-restful/v3/log
