@@ -170,7 +170,7 @@ replace (
 	github.com/coreos/go-oidc => github.com/coreos/go-oidc v2.1.0+incompatible
 	github.com/coreos/go-semver => github.com/coreos/go-semver v0.3.0
 	github.com/coreos/go-systemd => github.com/coreos/go-systemd v0.0.0-20190719114852-fd7a80b32e1f
-	github.com/coreos/pkg => github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f
+	github.com/coreos/pkg => github.com/coreos/pkg v0.0.0-20240122114842-bbd7aa9bf6fb
 	github.com/cpuguy83/go-md2man => github.com/cpuguy83/go-md2man v1.0.10
 	github.com/creack/pty => github.com/creack/pty v1.1.9
 	github.com/cyphar/filepath-securejoin => github.com/cyphar/filepath-securejoin v0.2.2
