@@ -39,8 +39,8 @@ require (
 	github.com/go-openapi/jsonreference v0.20.0 // indirect
 	github.com/go-openapi/swag v0.19.14 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
-	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
+	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic v0.5.7-v3refs // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
@@ -238,7 +238,7 @@ replace (
 	github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 	github.com/golang-migrate/migrate/v4 => github.com/golang-migrate/migrate/v4 v4.10.0
 	github.com/golang/glog => github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
-	github.com/golang/groupcache => github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
+	github.com/golang/groupcache => github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8
 	github.com/golang/protobuf => github.com/golang/protobuf v1.4.3
 	github.com/golang/snappy => github.com/golang/snappy v0.0.1
 	github.com/golangplus/bytes => github.com/golangplus/bytes v0.0.0-20160111154220-45c989fe5450
