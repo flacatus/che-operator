@@ -98,7 +98,7 @@ require (
 
 replace (
 	bazil.org/fuse => bazil.org/fuse v0.0.0-20160811212531-371fbbdaa898
-	cloud.google.com/go => cloud.google.com/go v0.54.0
+	cloud.google.com/go => cloud.google.com/go v0.123.0
 	cloud.google.com/go/bigquery => cloud.google.com/go/bigquery v1.4.0
 	cloud.google.com/go/datastore => cloud.google.com/go/datastore v1.2.0
 	cloud.google.com/go/firestore => cloud.google.com/go/firestore v1.1.0
@@ -448,7 +448,7 @@ replace (
 	gomodules.xyz/jsonpatch/v2 => gomodules.xyz/jsonpatch/v2 v2.0.1
 	google.golang.org/api => google.golang.org/api v0.20.0
 	google.golang.org/appengine => google.golang.org/appengine v1.6.5
-	google.golang.org/cloud => cloud.google.com/go v0.0.0-20200305180117-a6b88cf34a49
+	google.golang.org/cloud => cloud.google.com/go v0.123.0
 	google.golang.org/genproto/googleapis/rpc => google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
 	google.golang.org/grpc => google.golang.org/grpc v1.58.3
 	google.golang.org/protobuf => google.golang.org/protobuf v1.34.1
