@@ -196,7 +196,7 @@ github.com/sirupsen/logrus
 # github.com/spf13/pflag v1.0.5 => github.com/spf13/pflag v1.0.5
 ## explicit; go 1.12
 github.com/spf13/pflag
-# github.com/stretchr/testify v1.8.4 => github.com/stretchr/testify v1.4.0
+# github.com/stretchr/testify v1.11.1 => github.com/stretchr/testify v1.4.0
 ## explicit
 github.com/stretchr/testify/assert
 # go.uber.org/atomic v1.7.0 => go.uber.org/atomic v1.7.0
@@ -237,7 +237,7 @@ golang.org/x/net/trace
 ## explicit; go 1.17
 golang.org/x/oauth2
 golang.org/x/oauth2/internal
-# golang.org/x/sys v0.18.0
+# golang.org/x/sys v0.26.0
 ## explicit; go 1.18
 golang.org/x/sys/execabs
 golang.org/x/sys/plan9
@@ -897,7 +897,7 @@ sigs.k8s.io/yaml
 # github.com/coreos/pkg => github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f
 # github.com/cpuguy83/go-md2man => github.com/cpuguy83/go-md2man v1.0.10
 # github.com/creack/pty => github.com/creack/pty v1.1.9
-# github.com/cyphar/filepath-securejoin => github.com/cyphar/filepath-securejoin v0.2.2
+# github.com/cyphar/filepath-securejoin => github.com/cyphar/filepath-securejoin v0.6.1
 # github.com/cznic/mathutil => github.com/cznic/mathutil v0.0.0-20180504122225-ca4c9f2c1369
 # github.com/davecgh/go-spew => github.com/davecgh/go-spew v1.1.1
 # github.com/daviddengcn/go-colortext => github.com/daviddengcn/go-colortext v0.0.0-20160507010035-511bcaf42ccd
