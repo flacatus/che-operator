@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -11,7 +11,7 @@ require (
 	github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
-	github.com/sirupsen/logrus v1.8.1
+	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.23.0
@@ -105,7 +105,7 @@ replace (
 	cloud.google.com/go/pubsub => cloud.google.com/go/pubsub v1.2.0
 	cloud.google.com/go/spanner => cloud.google.com/go/spanner v1.2.0
 	cloud.google.com/go/storage => cloud.google.com/go/storage v1.5.0
-	git/github/microsoft/go-winio => github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5
+	git/github/microsoft/go-winio => github.com/Microsoft/go-winio v0.6.2
 	github.com/Azure/go-ansiterm => github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78
 	github.com/Azure/go-autorest => github.com/Azure/go-autorest v0.0.0-20200908233159-fafe600ec8bd
 	github.com/Azure/go-autorest/autorest => github.com/Azure/go-autorest/autorest v0.0.0-20200908233159-fafe600ec8bd
@@ -120,7 +120,7 @@ replace (
 	github.com/Masterminds/goutils => github.com/Masterminds/goutils v1.1.0
 	github.com/Masterminds/semver/v3 => github.com/Masterminds/semver/v3 v3.0.3
 	github.com/Masterminds/sprig/v3 => github.com/Masterminds/sprig/v3 v3.0.2
-	github.com/Microsoft/go-winio => github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5
+	github.com/Microsoft/go-winio => github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.9
 	github.com/NYTimes/gziphandler => github.com/NYTimes/gziphandler v1.0.1
 	github.com/PuerkitoBio/purell => github.com/PuerkitoBio/purell v1.1.1
