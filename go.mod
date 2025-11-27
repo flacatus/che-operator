@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21.0
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -407,7 +407,7 @@ replace (
 	github.com/smartystreets/goconvey => github.com/smartystreets/goconvey v1.6.4
 	github.com/soheilhy/cmux => github.com/soheilhy/cmux v0.1.4
 	github.com/spf13/afero => github.com/spf13/afero v1.2.2
-	github.com/spf13/cast => github.com/spf13/cast v1.3.0
+	github.com/spf13/cast => github.com/spf13/cast v1.10.0
 	github.com/spf13/cobra => github.com/spf13/cobra v0.0.0-20190321000552-67fc4837d267
 	github.com/spf13/jwalterweatherman => github.com/spf13/jwalterweatherman v1.1.0
 	github.com/spf13/pflag => github.com/spf13/pflag v1.0.5
