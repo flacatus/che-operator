@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -43,7 +43,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/gnostic v0.5.7-v3refs // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
-	github.com/google/uuid v1.3.0 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.6 // indirect
@@ -119,7 +119,7 @@ replace (
 	github.com/MakeNowJust/heredoc => github.com/MakeNowJust/heredoc v0.0.0-20171113091838-e9091a26100e
 	github.com/Masterminds/goutils => github.com/Masterminds/goutils v1.1.0
 	github.com/Masterminds/semver/v3 => github.com/Masterminds/semver/v3 v3.0.3
-	github.com/Masterminds/sprig/v3 => github.com/Masterminds/sprig/v3 v3.0.2
+	github.com/Masterminds/sprig/v3 => github.com/Masterminds/sprig/v3 v3.3.0
 	github.com/Microsoft/go-winio => github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5
 	github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.9
 	github.com/NYTimes/gziphandler => github.com/NYTimes/gziphandler v1.0.1
