@@ -1,13 +1,13 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
 	github.com/devfile/api/v2 v2.2.2
 	github.com/devfile/devworkspace-operator v0.31.0
 	github.com/go-logr/logr v1.2.4
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
@@ -214,7 +214,7 @@ replace (
 	github.com/go-errors/errors => github.com/go-errors/errors v1.0.1
 	github.com/go-ini/ini => github.com/go-ini/ini v1.25.4
 	github.com/go-kit/log => github.com/go-kit/log v0.1.0
-	github.com/go-logfmt/logfmt => github.com/go-logfmt/logfmt v0.5.0
+	github.com/go-logfmt/logfmt => github.com/go-logfmt/logfmt v0.6.1
 	github.com/go-openapi/errors => github.com/go-openapi/errors v0.19.2
 	github.com/go-openapi/jsonpointer => github.com/go-openapi/jsonpointer v0.19.3
 	github.com/go-openapi/jsonreference => github.com/go-openapi/jsonreference v0.19.3
