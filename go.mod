@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.24.0
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -12,7 +12,7 @@ require (
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
 	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.23.0
 	k8s.io/api v0.26.1
@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.37.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -233,7 +233,7 @@ replace (
 	github.com/goccy/go-yaml => github.com/goccy/go-yaml v1.8.1
 	github.com/gocql/gocql => github.com/gocql/gocql v0.0.0-20190301043612-f6df8288f9b4
 	github.com/godbus/dbus => github.com/godbus/dbus v0.0.0-20190422162347-ade71ed3457e
-	github.com/gofrs/flock => github.com/gofrs/flock v0.7.1
+	github.com/gofrs/flock => github.com/gofrs/flock v0.13.0
 	github.com/gofrs/uuid => github.com/gofrs/uuid v3.2.0+incompatible
 	github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 	github.com/golang-migrate/migrate/v4 => github.com/golang-migrate/migrate/v4 v4.10.0
