@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -305,7 +305,7 @@ replace (
 	github.com/jessevdk/go-flags => github.com/jessevdk/go-flags v1.4.0
 	github.com/jmespath/go-jmespath => github.com/jmespath/go-jmespath v0.3.0
 	github.com/joefitzgerald/rainbow-reporter => github.com/joefitzgerald/rainbow-reporter v0.1.0
-	github.com/jonboulle/clockwork => github.com/jonboulle/clockwork v0.1.0
+	github.com/jonboulle/clockwork => github.com/jonboulle/clockwork v0.5.0
 	github.com/jpillora/backoff => github.com/jpillora/backoff v1.0.0
 	github.com/json-iterator/go => github.com/json-iterator/go v0.0.0-20200608025830-a1ca0830781e
 	github.com/jstemmer/go-junit-report => github.com/jstemmer/go-junit-report v0.9.1
