@@ -177,8 +177,8 @@ github.com/prometheus/client_golang/prometheus
 github.com/prometheus/client_golang/prometheus/collectors
 github.com/prometheus/client_golang/prometheus/internal
 github.com/prometheus/client_golang/prometheus/promhttp
-# github.com/prometheus/client_model v0.3.0 => github.com/prometheus/client_model v0.3.0
-## explicit; go 1.9
+# github.com/prometheus/client_model v0.6.2 => github.com/prometheus/client_model v0.6.2
+## explicit; go 1.22.0
 github.com/prometheus/client_model/go
 # github.com/prometheus/common v0.37.0 => github.com/prometheus/common v0.26.0
 ## explicit; go 1.11
@@ -352,7 +352,7 @@ google.golang.org/grpc/serviceconfig
 google.golang.org/grpc/stats
 google.golang.org/grpc/status
 google.golang.org/grpc/tap
-# google.golang.org/protobuf v1.34.1 => google.golang.org/protobuf v1.34.1
+# google.golang.org/protobuf v1.36.6 => google.golang.org/protobuf v1.34.1
 ## explicit; go 1.17
 google.golang.org/protobuf/encoding/protojson
 google.golang.org/protobuf/encoding/prototext
@@ -1108,7 +1108,7 @@ sigs.k8s.io/yaml
 # github.com/posener/complete => github.com/posener/complete v1.1.1
 # github.com/pquerna/cachecontrol => github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021
 # github.com/prometheus/client_golang => github.com/prometheus/client_golang v1.14.0
-# github.com/prometheus/client_model => github.com/prometheus/client_model v0.3.0
+# github.com/prometheus/client_model => github.com/prometheus/client_model v0.6.2
 # github.com/prometheus/common => github.com/prometheus/common v0.26.0
 # github.com/prometheus/procfs => github.com/prometheus/procfs v0.6.0
 # github.com/redhat-cop/operator-utils => github.com/redhat-cop/operator-utils v1.1.4
