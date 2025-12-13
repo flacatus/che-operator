@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -353,7 +353,7 @@ replace (
 	github.com/modern-go/reflect2 => github.com/modern-go/reflect2 v1.0.1
 	github.com/mongodb/mongo-go-driver => github.com/mongodb/mongo-go-driver v1.1.0
 	github.com/monochromegane/go-gitignore => github.com/monochromegane/go-gitignore v0.0.0-20200626010858-205db1a8cc00
-	github.com/morikuni/aec => github.com/morikuni/aec v1.0.0
+	github.com/morikuni/aec => github.com/morikuni/aec v1.1.0
 	github.com/munnerz/goautoneg => github.com/munnerz/goautoneg v0.0.0-20120707110453-a547fc61f48d
 	github.com/mwitkow/go-conntrack => github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223
 	github.com/nakagami/firebirdsql => github.com/nakagami/firebirdsql v0.0.0-20190310045651-3c02a58cfed8
