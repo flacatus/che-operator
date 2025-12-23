@@ -165,7 +165,7 @@ replace (
 	github.com/containerd/go-runc => github.com/containerd/go-runc v0.0.0-20180907222934-5a6d9f37cfa3
 	github.com/containerd/ttrpc => github.com/containerd/ttrpc v1.0.1
 	github.com/containerd/typeurl => github.com/containerd/typeurl v0.0.0-20190228175220-2a93cfde8c20
-	github.com/coreos/bbolt => github.com/coreos/bbolt v1.3.3
+	github.com/coreos/bbolt => github.com/coreos/bbolt v1.4.3
 	github.com/coreos/etcd => github.com/coreos/etcd v3.3.15+incompatible
 	github.com/coreos/go-oidc => github.com/coreos/go-oidc v2.1.0+incompatible
 	github.com/coreos/go-semver => github.com/coreos/go-semver v0.3.0
