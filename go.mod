@@ -246,7 +246,7 @@ replace (
 	github.com/google/btree => github.com/google/btree v1.0.0
 	github.com/google/go-cmp => github.com/google/go-cmp v0.5.6
 	github.com/google/go-github => github.com/google/go-github/v18 v18.0.0-20180920013327-07716bad7a0c
-	github.com/google/go-querystring => github.com/google/go-querystring v1.0.0
+	github.com/google/go-querystring => github.com/google/go-querystring v1.2.0
 	github.com/google/gofuzz => github.com/google/gofuzz v0.0.0-20161122191042-44d81051d367
 	github.com/google/martian => github.com/google/martian v0.0.0-20180813215018-c223d6f7955e
 	github.com/google/pprof => github.com/google/pprof v0.0.0-20180921154107-7dadf64105bb
