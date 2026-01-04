@@ -46,29 +46,42 @@ func Walk(b *ir.BasicBlock, fn func(*ir.BasicBlock) bool) {
 
 func Vararg(x *ir.Slice) ([]ir.Value, bool) {
 	var out []ir.Value
-	slice, ok := x.X.(*ir.Alloc)
+	alloc, ok := ir.Unwrap(x.X).(*ir.Alloc)
 	if !ok {
 		return nil, false
 	}
-	for _, ref := range *slice.Referrers() {
-		if ref == x {
-			continue
+	var checkAlloc func(alloc ir.Value) bool
+	checkAlloc = func(alloc ir.Value) bool {
+		for _, ref := range *alloc.Referrers() {
+			if ref == x {
+				continue
+			}
+			if ref.Block() != x.Block() {
+				return false
+			}
+			switch ref := ref.(type) {
+			case *ir.IndexAddr:
+				idx := ref
+				if len(*idx.Referrers()) != 1 {
+					return false
+				}
+				store, ok := (*idx.Referrers())[0].(*ir.Store)
+				if !ok {
+					return false
+				}
+				out = append(out, store.Val)
+			case *ir.Copy:
+				if !checkAlloc(ref) {
+					return false
+				}
+			default:
+				return false
+			}
 		}
-		if ref.Block() != x.Block() {
-			return nil, false
-		}
-		idx, ok := ref.(*ir.IndexAddr)
-		if !ok {
-			return nil, false
-		}
-		if len(*idx.Referrers()) != 1 {
-			return nil, false
-		}
-		store, ok := (*idx.Referrers())[0].(*ir.Store)
-		if !ok {
-			return nil, false
-		}
-		out = append(out, store.Val)
+		return true
+	}
+	if !checkAlloc(alloc) {
+		return nil, false
 	}
 	return out, true
 }
@@ -121,4 +134,45 @@ func IsExample(fn *ir.Function) bool {
 		return false
 	}
 	return strings.HasSuffix(f.Name(), "_test.go")
+}
+
+// Flatten recursively returns the underlying value of an ir.Sigma or
+// ir.Phi node. If all edges in an ir.Phi node are the same (after
+// flattening), the flattened edge will get returned. If flattening is
+// not possible, nil is returned.
+func Flatten(v ir.Value) ir.Value {
+	failed := false
+	seen := map[ir.Value]struct{}{}
+	var out ir.Value
+	var dfs func(v ir.Value)
+	dfs = func(v ir.Value) {
+		if failed {
+			return
+		}
+		if _, ok := seen[v]; ok {
+			return
+		}
+		seen[v] = struct{}{}
+
+		switch v := v.(type) {
+		case *ir.Sigma:
+			dfs(v.X)
+		case *ir.Phi:
+			for _, e := range v.Edges {
+				dfs(e)
+			}
+		default:
+			if out == nil {
+				out = v
+			} else if out != v {
+				failed = true
+			}
+		}
+	}
+	dfs(v)
+
+	if failed {
+		return nil
+	}
+	return out
 }
