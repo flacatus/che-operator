@@ -2,7 +2,7 @@
 // of on-disk caching to reduce overall memory usage and to speed up
 // repeat runs.
 //
-// Public API
+// # Public API
 //
 // A Runner maps a list of analyzers and package patterns to a list of
 // results. Results provide access to diagnostics, directives, errors
@@ -12,7 +12,7 @@
 // that requires access to the loaded representation of a package has
 // to occur inside analyzers.
 //
-// Planning and execution
+// # Planning and execution
 //
 // Analyzing packages is split into two phases: planning and
 // execution.
@@ -38,7 +38,7 @@
 // execution of individual analyzers is bounded by the same semaphore
 // as executing packages.
 //
-// Parallelism
+// # Parallelism
 //
 // Actions are executed in parallel where the dependency graph allows.
 // Overall parallelism is bounded by a semaphore, sized according to
@@ -56,7 +56,7 @@
 // the dependency graph. A lot of inter-connected packages will see
 // less parallelism than a lot of independent packages.
 //
-// Caching
+// # Caching
 //
 // The runner caches facts, directives and diagnostics in a
 // content-addressable cache that is designed after Go's own cache.
@@ -104,7 +104,7 @@ package runner
 // of time.
 //
 // We would likely need to do extensive benchmarking to figure out how
-// long to keep data around to find a sweetspot where we reduce CPU
+// long to keep data around to find a sweet spot where we reduce CPU
 // load without increasing memory usage.
 //
 // We can probably populate the cache after we've analyzed a package,
@@ -112,12 +112,12 @@ package runner
 // future.
 
 import (
+	"bytes"
 	"encoding/gob"
 	"fmt"
 	"go/token"
 	"go/types"
 	"io"
-	"io/ioutil"
 	"os"
 	"reflect"
 	"runtime"
@@ -130,8 +130,8 @@ import (
 	"honnef.co/go/tools/analysis/report"
 	"honnef.co/go/tools/config"
 	"honnef.co/go/tools/go/loader"
-	"honnef.co/go/tools/internal/cache"
 	tsync "honnef.co/go/tools/internal/sync"
+	"honnef.co/go/tools/lintcmd/cache"
 	"honnef.co/go/tools/unused"
 
 	"golang.org/x/tools/go/analysis"
@@ -139,13 +139,16 @@ import (
 	"golang.org/x/tools/go/types/objectpath"
 )
 
+const sanityCheck = false
+
+// Diagnostic is like go/analysis.Diagnostic, but with all token.Pos resolved to token.Position.
 type Diagnostic struct {
 	Position token.Position
 	End      token.Position
 	Category string
 	Message  string
 
-	SuggestedFixed []SuggestedFix
+	SuggestedFixes []SuggestedFix
 	Related        []RelatedInformation
 }
 
@@ -170,7 +173,7 @@ type TextEdit struct {
 // A Result describes the result of analyzing a single package.
 //
 // It holds references to cached diagnostics and directives. They can
-// be loaded on demand with Diagnostics and Directives respectively.
+// be loaded on demand with the Load method.
 type Result struct {
 	Package *loader.PackageSpec
 	Config  config.Config
@@ -179,8 +182,10 @@ type Result struct {
 
 	Failed bool
 	Errors []error
-	// Action results, paths to files
+	// Action results, path to file
 	results string
+	// Results relevant to testing, only set when test mode is enabled, path to file
+	testData string
 }
 
 type SerializedDirective struct {
@@ -204,7 +209,7 @@ func serializeDirective(dir lint.Directive, fset *token.FileSet) SerializedDirec
 type ResultData struct {
 	Directives  []SerializedDirective
 	Diagnostics []Diagnostic
-	Unused      unused.SerializedResult
+	Unused      unused.Result
 }
 
 func (r Result) Load() (ResultData, error) {
@@ -221,6 +226,36 @@ func (r Result) Load() (ResultData, error) {
 	}
 	defer f.Close()
 	var out ResultData
+	err = gob.NewDecoder(f).Decode(&out)
+	return out, err
+}
+
+// TestData contains extra information about analysis runs that is only available in test mode.
+type TestData struct {
+	// Facts contains facts produced by analyzers for a package.
+	// Unlike vetx, this list only contains facts specific to this package,
+	// not all facts for the transitive closure of dependencies.
+	Facts []TestFact
+	// List of files that were part of the package.
+	Files []string
+}
+
+// LoadTest returns data relevant to testing.
+// It should only be called if Runner.TestMode was set to true.
+func (r Result) LoadTest() (TestData, error) {
+	if r.Failed {
+		panic("Load called on failed Result")
+	}
+	if r.results == "" {
+		// this package was only a dependency
+		return TestData{}, nil
+	}
+	f, err := os.Open(r.testData)
+	if err != nil {
+		return TestData{}, fmt.Errorf("failed loading test data: %w", err)
+	}
+	defer f.Close()
+	var out TestData
 	err = gob.NewDecoder(f).Decode(&out)
 	return out, err
 }
@@ -267,21 +302,28 @@ type packageAction struct {
 	baseAction
 
 	// Action description
-
 	Package   *loader.PackageSpec
 	factsOnly bool
 	hash      cache.ActionID
 
 	// Action results
-
-	cfg     config.Config
-	vetx    string
-	results string
-	skipped bool
+	cfg      config.Config
+	vetx     string
+	results  string
+	testData string
+	skipped  bool
 }
 
 func (act *packageAction) String() string {
 	return fmt.Sprintf("packageAction(%s)", act.Package)
+}
+
+type objectFact struct {
+	fact analysis.Fact
+	// TODO(dh): why do we store the objectpath when producing the
+	// fact? Is it just for the sanity checking, which compares the
+	// stored path with a path recomputed from objectFactKey.Obj?
+	path objectpath.Path
 }
 
 type objectFactKey struct {
@@ -300,6 +342,14 @@ type gobFact struct {
 	Fact    analysis.Fact
 }
 
+// TestFact is a serialization of facts that is specific to the test mode.
+type TestFact struct {
+	ObjectName string
+	Position   token.Position
+	FactString string
+	Analyzer   string
+}
+
 // analyzerAction describes the act of analyzing a package with a
 // single analyzer.
 type analyzerAction struct {
@@ -316,7 +366,7 @@ type analyzerAction struct {
 	// a package has been fully analyzed.
 	Result       interface{}
 	Diagnostics  []Diagnostic
-	ObjectFacts  map[objectFactKey]analysis.Fact
+	ObjectFacts  map[objectFactKey]objectFact
 	PackageFacts map[packageFactKey]analysis.Fact
 	Pass         *analysis.Pass
 }
@@ -328,7 +378,10 @@ func (act *analyzerAction) String() string {
 // A Runner executes analyzers on packages.
 type Runner struct {
 	Stats     Stats
-	GoVersion int
+	GoVersion string
+
+	// If set to true, Runner will populate results with data relevant to testing analyzers
+	TestMode bool
 
 	// Config that gets merged with per-package configs
 	cfg       config.Config
@@ -341,18 +394,14 @@ type subrunner struct {
 	analyzers     []*analysis.Analyzer
 	factAnalyzers []*analysis.Analyzer
 	analyzerNames string
+	cache         *cache.Cache
 }
 
 // New returns a new Runner.
-func New(cfg config.Config) (*Runner, error) {
-	cache, err := cache.Default()
-	if err != nil {
-		return nil, err
-	}
-
+func New(cfg config.Config, c *cache.Cache) (*Runner, error) {
 	return &Runner{
 		cfg:       cfg,
-		cache:     cache,
+		cache:     c,
 		semaphore: tsync.NewSemaphore(runtime.GOMAXPROCS(0)),
 	}, nil
 }
@@ -375,6 +424,7 @@ func newSubrunner(r *Runner, analyzers []*analysis.Analyzer) *subrunner {
 		analyzers:     analyzers,
 		factAnalyzers: factAnalyzers,
 		analyzerNames: strings.Join(analyzerNames, ","),
+		cache:         r.cache,
 	}
 }
 
@@ -435,7 +485,7 @@ func newAnalyzerAction(an *analysis.Analyzer, cache map[*analysis.Analyzer]*anal
 
 	a := &analyzerAction{
 		Analyzer:     an,
-		ObjectFacts:  map[objectFactKey]analysis.Fact{},
+		ObjectFacts:  map[objectFactKey]objectFact{},
 		PackageFacts: map[packageFactKey]analysis.Fact{},
 	}
 	cache[an] = a
@@ -470,7 +520,7 @@ func (r *subrunner) do(act action) error {
 
 	// compute hash of action
 	a.cfg = a.Package.Config.Merge(r.cfg)
-	h := cache.NewHash("staticcheck " + a.Package.PkgPath)
+	h := r.cache.NewHash("staticcheck " + a.Package.PkgPath)
 
 	// Note that we do not filter the list of analyzers by the
 	// package's configuration. We don't allow configuration to
@@ -485,6 +535,8 @@ func (r *subrunner) do(act action) error {
 
 	// Config used for constructing the hash; this config doesn't have
 	// Checks populated, because we always run all checks.
+	//
+	// This even works for users who add custom checks, because we include the binary's hash.
 	hashCfg := a.cfg
 	hashCfg.Checks = nil
 	// note that we don't hash staticcheck's version; it is set as the
@@ -492,7 +544,8 @@ func (r *subrunner) do(act action) error {
 	fmt.Fprintf(h, "cfg %#v\n", hashCfg)
 	fmt.Fprintf(h, "pkg %x\n", a.Package.Hash)
 	fmt.Fprintf(h, "analyzers %s\n", r.analyzerNames)
-	fmt.Fprintf(h, "go 1.%d\n", r.GoVersion)
+	fmt.Fprintf(h, "go %s\n", r.GoVersion)
+	fmt.Fprintf(h, "env godebug %q\n", os.Getenv("GODEBUG"))
 
 	// OPT(dh): do we actually need to hash vetx? can we not assume
 	// that for identical inputs, staticcheck will produce identical
@@ -512,8 +565,11 @@ func (r *subrunner) do(act action) error {
 	ids = append(ids, cache.Subkey(a.hash, "vetx"))
 	if !a.factsOnly {
 		ids = append(ids, cache.Subkey(a.hash, "results"))
+		if r.TestMode {
+			ids = append(ids, cache.Subkey(a.hash, "testdata"))
+		}
 	}
-	if err := getCachedFiles(r.cache, ids, []*string{&a.vetx, &a.results}); err != nil {
+	if err := getCachedFiles(r.cache, ids, []*string{&a.vetx, &a.results, &a.testData}); err != nil {
 		result, err := r.doUncached(a)
 		if err != nil {
 			return err
@@ -534,13 +590,8 @@ func (r *subrunner) do(act action) error {
 		// change to a package requires re-analyzing all dependents,
 		// even if the vetx data stayed the same. See also the note at
 		// the top of loader/hash.go.
-		tf, err := ioutil.TempFile("", "staticcheck")
-		if err != nil {
-			return err
-		}
-		defer tf.Close()
-		os.Remove(tf.Name())
 
+		tf := &bytes.Buffer{}
 		enc := gob.NewEncoder(tf)
 		for _, gf := range result.facts {
 			if err := enc.Encode(gf); err != nil {
@@ -548,10 +599,7 @@ func (r *subrunner) do(act action) error {
 			}
 		}
 
-		if _, err := tf.Seek(0, io.SeekStart); err != nil {
-			return err
-		}
-		a.vetx, err = r.writeCacheReader(a, "vetx", tf)
+		a.vetx, err = r.writeCacheReader(a, "vetx", bytes.NewReader(tf.Bytes()))
 		if err != nil {
 			return err
 		}
@@ -571,6 +619,17 @@ func (r *subrunner) do(act action) error {
 		a.results, err = r.writeCacheGob(a, "results", out)
 		if err != nil {
 			return err
+		}
+
+		if r.TestMode {
+			out := TestData{
+				Facts: result.testFacts,
+				Files: result.lpkg.GoFiles,
+			}
+			a.testData, err = r.writeCacheGob(a, "testdata", out)
+			if err != nil {
+				return err
+			}
 		}
 	}
 	return nil
@@ -596,7 +655,7 @@ func (r *Runner) writeCacheReader(a *packageAction, kind string, rs io.ReadSeeke
 }
 
 func (r *Runner) writeCacheGob(a *packageAction, kind string, data interface{}) (string, error) {
-	f, err := ioutil.TempFile("", "staticcheck")
+	f, err := os.CreateTemp("", "staticcheck")
 	if err != nil {
 		return "", err
 	}
@@ -614,10 +673,13 @@ func (r *Runner) writeCacheGob(a *packageAction, kind string, data interface{}) 
 type packageActionResult struct {
 	facts   []gobFact
 	diags   []Diagnostic
-	unused  unused.SerializedResult
+	unused  unused.Result
 	dirs    []lint.Directive
 	lpkg    *loader.Package
 	skipped bool
+
+	// Only set when using test mode
+	testFacts []TestFact
 }
 
 func (r *subrunner) doUncached(a *packageAction) (packageActionResult, error) {
@@ -625,13 +687,13 @@ func (r *subrunner) doUncached(a *packageAction) (packageActionResult, error) {
 	// processed concurrently, we shouldn't load b's export data
 	// twice.
 
-	pkg, _, err := loader.Load(a.Package)
+	pkg, _, err := loader.Load(a.Package, &loader.Options{GoVersion: r.GoVersion})
 	if err != nil {
 		return packageActionResult{}, err
 	}
 
 	if len(pkg.Errors) > 0 {
-		// this handles errors that occured during type-checking the
+		// this handles errors that occurred during type-checking the
 		// package in loader.Load
 		for _, err := range pkg.Errors {
 			a.errors = append(a.errors, err)
@@ -654,11 +716,12 @@ func (r *subrunner) doUncached(a *packageAction) (packageActionResult, error) {
 	res, err := r.runAnalyzers(a, pkg)
 
 	return packageActionResult{
-		facts:  res.facts,
-		diags:  res.diagnostics,
-		unused: res.unused,
-		dirs:   dirs,
-		lpkg:   pkg,
+		facts:     res.facts,
+		testFacts: res.testFacts,
+		diags:     res.diagnostics,
+		unused:    res.unused,
+		dirs:      dirs,
+		lpkg:      pkg,
 	}, err
 }
 
@@ -678,7 +741,7 @@ func pkgPaths(root *types.Package) map[string]*types.Package {
 	return out
 }
 
-func (r *Runner) loadFacts(root *types.Package, dep *packageAction, objFacts map[objectFactKey]analysis.Fact, pkgFacts map[packageFactKey]analysis.Fact) error {
+func (r *Runner) loadFacts(root *types.Package, dep *packageAction, objFacts map[objectFactKey]objectFact, pkgFacts map[packageFactKey]analysis.Fact) error {
 	// Load facts of all imported packages
 	vetx, err := os.Open(dep.vetx)
 	if err != nil {
@@ -715,7 +778,7 @@ func (r *Runner) loadFacts(root *types.Package, dep *packageAction, objFacts map
 			objFacts[objectFactKey{
 				Obj:  obj,
 				Type: reflect.TypeOf(gf.Fact),
-			}] = gf.Fact
+			}] = objectFact{gf.Fact, objectpath.Path(gf.ObjPath)}
 		}
 	}
 	return nil
@@ -767,7 +830,7 @@ type analyzerRunner struct {
 	pkg *loader.Package
 	// object facts of our dependencies; may contain facts of
 	// analyzers other than the current one
-	depObjFacts map[objectFactKey]analysis.Fact
+	depObjFacts map[objectFactKey]objectFact
 	// package facts of our dependencies; may contain facts of
 	// analyzers other than the current one
 	depPkgFacts map[packageFactKey]analysis.Fact
@@ -827,7 +890,7 @@ func (ar *analyzerRunner) do(act action) error {
 							NewText:  edit.NewText,
 						})
 					}
-					d.SuggestedFixed = append(d.SuggestedFixed, s)
+					d.SuggestedFixes = append(d.SuggestedFixes, s)
 				}
 				for _, rel := range diag.Related {
 					d.Related = append(d.Related, RelatedInformation{
@@ -846,10 +909,10 @@ func (ar *analyzerRunner) do(act action) error {
 				Type: reflect.TypeOf(fact),
 			}
 			if f, ok := ar.depObjFacts[key]; ok {
-				reflect.ValueOf(fact).Elem().Set(reflect.ValueOf(f).Elem())
+				reflect.ValueOf(fact).Elem().Set(reflect.ValueOf(f.fact).Elem())
 				return true
 			} else if f, ok := a.ObjectFacts[key]; ok {
-				reflect.ValueOf(fact).Elem().Set(reflect.ValueOf(f).Elem())
+				reflect.ValueOf(fact).Elem().Set(reflect.ValueOf(f.fact).Elem())
 				return true
 			}
 			return false
@@ -873,7 +936,8 @@ func (ar *analyzerRunner) do(act action) error {
 				Obj:  obj,
 				Type: reflect.TypeOf(fact),
 			}
-			a.ObjectFacts[key] = fact
+			path, _ := objectpath.For(obj)
+			a.ObjectFacts[key] = objectFact{fact, path}
 		},
 		ExportPackageFact: func(fact analysis.Fact) {
 			key := packageFactKey{
@@ -904,7 +968,7 @@ func (ar *analyzerRunner) do(act action) error {
 				if filterFactType(key.Type) {
 					out = append(out, analysis.ObjectFact{
 						Object: key.Obj,
-						Fact:   fact,
+						Fact:   fact.fact,
 					})
 				}
 			}
@@ -912,7 +976,7 @@ func (ar *analyzerRunner) do(act action) error {
 				if filterFactType(key.Type) {
 					out = append(out, analysis.ObjectFact{
 						Object: key.Obj,
-						Fact:   fact,
+						Fact:   fact.fact,
 					})
 				}
 			}
@@ -933,11 +997,14 @@ func (ar *analyzerRunner) do(act action) error {
 type analysisResult struct {
 	facts       []gobFact
 	diagnostics []Diagnostic
-	unused      unused.SerializedResult
+	unused      unused.Result
+
+	// Only set when using test mode
+	testFacts []TestFact
 }
 
 func (r *subrunner) runAnalyzers(pkgAct *packageAction, pkg *loader.Package) (analysisResult, error) {
-	depObjFacts := map[objectFactKey]analysis.Fact{}
+	depObjFacts := map[objectFactKey]objectFact{}
 	depPkgFacts := map[packageFactKey]analysis.Fact{}
 
 	for _, dep := range pkgAct.deps {
@@ -978,6 +1045,12 @@ func (r *subrunner) runAnalyzers(pkgAct *packageAction, pkg *loader.Package) (an
 		}
 	}
 
+	// Don't hang if there are no analyzers to run; for example
+	// because we are analyzing a dependency but have no analyzers
+	// that produce facts.
+	if len(all) == 0 {
+		close(queue)
+	}
 	for item := range queue {
 		b := r.semaphore.AcquireMaybe()
 		if b {
@@ -989,12 +1062,12 @@ func (r *subrunner) runAnalyzers(pkgAct *packageAction, pkg *loader.Package) (an
 		}
 	}
 
-	var unusedResult unused.SerializedResult
+	var unusedResult unused.Result
 	for _, a := range all {
-		if a != root && a.Analyzer.Name == "U1000" {
+		if a != root && a.Analyzer.Name == "U1000" && !a.failed {
 			// TODO(dh): figure out a clean abstraction, instead of
 			// special-casing U1000.
-			unusedResult = unused.Serialize(a.Pass, a.Result.(unused.Result), pkg.Fset)
+			unusedResult = a.Result.(unused.Result)
 		}
 
 		for key, fact := range a.ObjectFacts {
@@ -1006,25 +1079,56 @@ func (r *subrunner) runAnalyzers(pkgAct *packageAction, pkg *loader.Package) (an
 	}
 
 	// OPT(dh): cull objects not reachable via the exported closure
+	var testFacts []TestFact
 	gobFacts := make([]gobFact, 0, len(depObjFacts)+len(depPkgFacts))
 	for key, fact := range depObjFacts {
-		objPath, err := objectpath.For(key.Obj)
-		if err != nil {
+		if fact.path == "" {
 			continue
+		}
+		if sanityCheck {
+			p, _ := objectpath.For(key.Obj)
+			if p != fact.path {
+				panic(fmt.Sprintf("got different object paths for %v. old: %q new: %q", key.Obj, fact.path, p))
+			}
 		}
 		gf := gobFact{
 			PkgPath: key.Obj.Pkg().Path(),
-			ObjPath: string(objPath),
-			Fact:    fact,
+			ObjPath: string(fact.path),
+			Fact:    fact.fact,
 		}
 		gobFacts = append(gobFacts, gf)
 	}
+
 	for key, fact := range depPkgFacts {
 		gf := gobFact{
 			PkgPath: key.Pkg.Path(),
 			Fact:    fact,
 		}
 		gobFacts = append(gobFacts, gf)
+	}
+
+	if r.TestMode {
+		for _, a := range all {
+			for key, fact := range a.ObjectFacts {
+				tgf := TestFact{
+					ObjectName: key.Obj.Name(),
+					Position:   pkg.Fset.Position(key.Obj.Pos()),
+					FactString: fmt.Sprint(fact.fact),
+					Analyzer:   a.Analyzer.Name,
+				}
+				testFacts = append(testFacts, tgf)
+			}
+
+			for _, fact := range a.PackageFacts {
+				tgf := TestFact{
+					ObjectName: "",
+					Position:   pkg.Fset.Position(pkg.Syntax[0].Pos()),
+					FactString: fmt.Sprint(fact),
+					Analyzer:   a.Analyzer.Name,
+				}
+				testFacts = append(testFacts, tgf)
+			}
+		}
 	}
 
 	var diags []Diagnostic
@@ -1034,6 +1138,7 @@ func (r *subrunner) runAnalyzers(pkgAct *packageAction, pkg *loader.Package) (an
 	}
 	return analysisResult{
 		facts:       gobFacts,
+		testFacts:   testFacts,
 		diagnostics: diags,
 		unused:      unusedResult,
 	}, nil
@@ -1078,24 +1183,12 @@ func allAnalyzers(analyzers []*analysis.Analyzer) []*analysis.Analyzer {
 //
 // If cfg is nil, a default config will be used. Otherwise, cfg will
 // be used, with the exception of the Mode field.
-//
-// Run can be called multiple times on the same Runner and it is safe
-// for concurrent use. All runs will share the same semaphore.
 func (r *Runner) Run(cfg *packages.Config, analyzers []*analysis.Analyzer, patterns []string) ([]Result, error) {
 	analyzers = allAnalyzers(analyzers)
 	registerGobTypes(analyzers)
 
-	for _, a := range analyzers {
-		flag := a.Flags.Lookup("go")
-		if flag == nil {
-			continue
-		}
-		// OPT(dh): this is terrible
-		flag.Value.Set(fmt.Sprintf("1.%d", r.GoVersion))
-	}
-
 	r.Stats.setState(StateLoadPackageGraph)
-	lpkgs, err := loader.Graph(cfg, patterns...)
+	lpkgs, err := loader.Graph(r.cache, cfg, patterns...)
 	if err != nil {
 		return nil, err
 	}
@@ -1142,13 +1235,14 @@ func (r *Runner) Run(cfg *packages.Config, analyzers []*analysis.Analyzer, patte
 			continue
 		}
 		out = append(out, Result{
-			Package: item.Package,
-			Config:  item.cfg,
-			Initial: !item.factsOnly,
-			Skipped: item.skipped,
-			Failed:  item.failed,
-			Errors:  item.errors,
-			results: item.results,
+			Package:  item.Package,
+			Config:   item.cfg,
+			Initial:  !item.factsOnly,
+			Skipped:  item.skipped,
+			Failed:   item.failed,
+			Errors:   item.errors,
+			results:  item.results,
+			testData: item.testData,
 		})
 	}
 	return out, nil

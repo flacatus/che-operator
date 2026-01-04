@@ -734,7 +734,7 @@ Values printed in italics have a dependency cycle.
 
 <p>
 <b>CFG</b>: Dashed edge is for unlikely branches. Blue color is for backward edges.
-Edge with a dot means that this edge follows the order in which blocks were laidout.
+Edge with a dot means that this edge follows the order in which blocks were laid out.
 </p>
 
 </div>
@@ -880,6 +880,9 @@ func valueLongHTML(v Node) string {
 	}
 	for _, a := range v.Operands(nil) {
 		s += fmt.Sprintf(" %s", valueHTML(*a))
+	}
+	if v, ok := v.(Instruction); ok {
+		s += fmt.Sprintf(" (%s)", v.Comment())
 	}
 
 	// OPT(dh): we're calling namedValues many times on the same function.
