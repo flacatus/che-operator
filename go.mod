@@ -6,7 +6,7 @@ require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
 	github.com/devfile/api/v2 v2.2.2
 	github.com/devfile/devworkspace-operator v0.31.0
-	github.com/go-logr/logr v1.2.4
+	github.com/go-logr/logr v1.4.1
 	github.com/google/go-cmp v0.6.0
 	github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/operator-framework/api v0.10.0
@@ -75,7 +75,7 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/component-base v0.26.1 // indirect
-	k8s.io/klog/v2 v2.80.1 // indirect
+	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280 // indirect
 	sigs.k8s.io/json v0.0.0-20220713155537-f223a00ba0e2 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
