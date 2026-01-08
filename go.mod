@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21.0
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -230,7 +230,7 @@ replace (
 	github.com/gobuffalo/flect => github.com/gobuffalo/flect v0.1.0
 	github.com/gobuffalo/here => github.com/gobuffalo/here v0.6.0
 	github.com/gobwas/glob => github.com/gobwas/glob v0.2.3
-	github.com/goccy/go-yaml => github.com/goccy/go-yaml v1.8.1
+	github.com/goccy/go-yaml => github.com/goccy/go-yaml v1.19.2
 	github.com/gocql/gocql => github.com/gocql/gocql v0.0.0-20190301043612-f6df8288f9b4
 	github.com/godbus/dbus => github.com/godbus/dbus v0.0.0-20190422162347-ade71ed3457e
 	github.com/gofrs/flock => github.com/gofrs/flock v0.7.1
