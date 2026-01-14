@@ -216,7 +216,7 @@ go.uber.org/zap/internal/bufferpool
 go.uber.org/zap/internal/color
 go.uber.org/zap/internal/exit
 go.uber.org/zap/zapcore
-# golang.org/x/lint v0.0.0-20200302205851-738671d3881b
+# golang.org/x/lint v0.0.0-20210508222113-6edffad5e616
 ## explicit; go 1.11
 golang.org/x/lint
 golang.org/x/lint/golint
@@ -864,7 +864,7 @@ sigs.k8s.io/yaml
 # github.com/bitly/go-hostpool => github.com/bitly/go-hostpool v0.0.0-20191224193725-5d3b4dc6ed47
 # github.com/bitly/go-simplejson => github.com/bitly/go-simplejson v0.0.0-20171023175154-0c965951289c
 # github.com/bkaradzic/go-lz4 => github.com/bkaradzic/go-lz4 v1.0.0
-# github.com/bketelsen/crypt => github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c
+# github.com/bketelsen/crypt => github.com/bketelsen/crypt v0.0.5
 # github.com/blang/semver => github.com/blang/semver v3.5.1+incompatible
 # github.com/blang/semver/v4 => github.com/blang/semver/v4 v4.0.0
 # github.com/bshuster-repo/logrus-logstash-hook => github.com/bshuster-repo/logrus-logstash-hook v1.0.0

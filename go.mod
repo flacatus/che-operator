@@ -88,7 +88,7 @@ require (
 	github.com/Shopify/logrus-bugsnag v0.0.0-00010101000000-000000000000 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
 	go.uber.org/tools v0.0.0-20190618225709-2cfd321de3ee // indirect
-	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
+	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/mod v0.12.0 // indirect
 	golang.org/x/tools v0.13.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
@@ -140,7 +140,7 @@ replace (
 	github.com/bitly/go-hostpool => github.com/bitly/go-hostpool v0.0.0-20191224193725-5d3b4dc6ed47
 	github.com/bitly/go-simplejson => github.com/bitly/go-simplejson v0.0.0-20171023175154-0c965951289c
 	github.com/bkaradzic/go-lz4 => github.com/bkaradzic/go-lz4 v1.0.0
-	github.com/bketelsen/crypt => github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c
+	github.com/bketelsen/crypt => github.com/bketelsen/crypt v0.0.5
 	github.com/blang/semver => github.com/blang/semver v3.5.1+incompatible
 	github.com/blang/semver/v4 => github.com/blang/semver/v4 v4.0.0
 	github.com/bshuster-repo/logrus-logstash-hook => github.com/bshuster-repo/logrus-logstash-hook v1.0.0
