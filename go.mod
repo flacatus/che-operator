@@ -351,7 +351,7 @@ replace (
 	github.com/moby/term => github.com/moby/term v0.0.0-20201216013528-df9cb8a40635
 	github.com/modern-go/concurrent => github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
 	github.com/modern-go/reflect2 => github.com/modern-go/reflect2 v1.0.1
-	github.com/mongodb/mongo-go-driver => github.com/mongodb/mongo-go-driver v1.1.0
+	github.com/mongodb/mongo-go-driver => github.com/mongodb/mongo-go-driver v1.17.9
 	github.com/monochromegane/go-gitignore => github.com/monochromegane/go-gitignore v0.0.0-20200626010858-205db1a8cc00
 	github.com/morikuni/aec => github.com/morikuni/aec v1.0.0
 	github.com/munnerz/goautoneg => github.com/munnerz/goautoneg v0.0.0-20120707110453-a547fc61f48d
