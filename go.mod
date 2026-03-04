@@ -1,13 +1,13 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.25.0
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
 	github.com/devfile/api/v2 v2.2.2
 	github.com/devfile/devworkspace-operator v0.31.0
 	github.com/go-logr/logr v1.2.4
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
@@ -58,12 +58,12 @@ require (
 	github.com/prometheus/client_golang v1.14.0 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.37.0 // indirect
-	github.com/prometheus/procfs v0.8.0 // indirect
+	github.com/prometheus/procfs v0.20.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.41.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -386,7 +386,7 @@ replace (
 	github.com/prometheus/client_golang => github.com/prometheus/client_golang v1.14.0
 	github.com/prometheus/client_model => github.com/prometheus/client_model v0.3.0
 	github.com/prometheus/common => github.com/prometheus/common v0.26.0
-	github.com/prometheus/procfs => github.com/prometheus/procfs v0.6.0
+	github.com/prometheus/procfs => github.com/prometheus/procfs v0.20.1
 	github.com/redhat-cop/operator-utils => github.com/redhat-cop/operator-utils v1.1.4
 	github.com/remyoudompheng/bigfft => github.com/remyoudompheng/bigfft v0.0.0-20190728182440-6a916e37a237
 	github.com/rogpeppe/fastuuid => github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af
