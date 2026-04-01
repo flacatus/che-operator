@@ -1,13 +1,13 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.24.0
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
 	github.com/devfile/api/v2 v2.2.2
 	github.com/devfile/devworkspace-operator v0.31.0
 	github.com/go-logr/logr v1.2.4
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.38.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -291,7 +291,7 @@ replace (
 	github.com/irifrance/gini => github.com/go-air/gini v1.0.1
 	github.com/itchyny/astgen-go => github.com/itchyny/astgen-go v0.0.0-20200519013840-cf3ea398f645
 	github.com/itchyny/go-flags => github.com/itchyny/go-flags v1.5.0
-	github.com/itchyny/gojq => github.com/itchyny/gojq v0.11.0
+	github.com/itchyny/gojq => github.com/itchyny/gojq v0.12.19
 	github.com/jackc/chunkreader/v2 => github.com/jackc/chunkreader/v2 v2.0.1
 	github.com/jackc/pgconn => github.com/jackc/pgconn v1.3.2
 	github.com/jackc/pgio => github.com/jackc/pgio v1.0.0
