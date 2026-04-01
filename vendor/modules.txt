@@ -95,7 +95,7 @@ github.com/google/gnostic/extensions
 github.com/google/gnostic/jsonschema
 github.com/google/gnostic/openapiv2
 github.com/google/gnostic/openapiv3
-# github.com/google/go-cmp v0.6.0 => github.com/google/go-cmp v0.5.6
+# github.com/google/go-cmp v0.7.0 => github.com/google/go-cmp v0.5.6
 ## explicit; go 1.8
 github.com/google/go-cmp/cmp
 github.com/google/go-cmp/cmp/cmpopts
@@ -237,8 +237,8 @@ golang.org/x/net/trace
 ## explicit; go 1.17
 golang.org/x/oauth2
 golang.org/x/oauth2/internal
-# golang.org/x/sys v0.18.0
-## explicit; go 1.18
+# golang.org/x/sys v0.38.0
+## explicit; go 1.24.0
 golang.org/x/sys/execabs
 golang.org/x/sys/plan9
 golang.org/x/sys/unix
@@ -1015,7 +1015,7 @@ sigs.k8s.io/yaml
 # github.com/irifrance/gini => github.com/go-air/gini v1.0.1
 # github.com/itchyny/astgen-go => github.com/itchyny/astgen-go v0.0.0-20200519013840-cf3ea398f645
 # github.com/itchyny/go-flags => github.com/itchyny/go-flags v1.5.0
-# github.com/itchyny/gojq => github.com/itchyny/gojq v0.11.0
+# github.com/itchyny/gojq => github.com/itchyny/gojq v0.12.19
 # github.com/jackc/chunkreader/v2 => github.com/jackc/chunkreader/v2 v2.0.1
 # github.com/jackc/pgconn => github.com/jackc/pgconn v1.3.2
 # github.com/jackc/pgio => github.com/jackc/pgio v1.0.0
