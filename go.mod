@@ -121,7 +121,7 @@ replace (
 	github.com/Masterminds/semver/v3 => github.com/Masterminds/semver/v3 v3.0.3
 	github.com/Masterminds/sprig/v3 => github.com/Masterminds/sprig/v3 v3.0.2
 	github.com/Microsoft/go-winio => github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5
-	github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.9
+	github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.14.1
 	github.com/NYTimes/gziphandler => github.com/NYTimes/gziphandler v1.0.1
 	github.com/PuerkitoBio/purell => github.com/PuerkitoBio/purell v1.1.1
 	github.com/PuerkitoBio/urlesc => github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2
