@@ -237,7 +237,7 @@ golang.org/x/net/trace
 ## explicit; go 1.17
 golang.org/x/oauth2
 golang.org/x/oauth2/internal
-# golang.org/x/sys v0.18.0
+# golang.org/x/sys v0.29.0
 ## explicit; go 1.18
 golang.org/x/sys/execabs
 golang.org/x/sys/plan9
@@ -1116,7 +1116,7 @@ sigs.k8s.io/yaml
 # github.com/rogpeppe/fastuuid => github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af
 # github.com/rogpeppe/go-internal => github.com/rogpeppe/go-internal v1.3.0
 # github.com/rs/xid => github.com/rs/xid v1.2.1
-# github.com/rs/zerolog => github.com/rs/zerolog v1.15.0
+# github.com/rs/zerolog => github.com/rs/zerolog v1.35.1
 # github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
 # github.com/ryanuber/columnize => github.com/ryanuber/columnize v0.0.0-20160712163229-9b3edd62028f
 # github.com/satori/go.uuid => github.com/satori/go.uuid v1.2.0
