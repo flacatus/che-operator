@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -329,7 +329,7 @@ replace (
 	github.com/mailru/easyjson => github.com/mailru/easyjson v0.0.0-20200218084223-8edcc4e51f39
 	github.com/markbates/pkger => github.com/markbates/pkger v0.17.1
 	github.com/mattn/go-colorable => github.com/mattn/go-colorable v0.1.7
-	github.com/mattn/go-isatty => github.com/mattn/go-isatty v0.0.3
+	github.com/mattn/go-isatty => github.com/mattn/go-isatty v0.0.22
 	github.com/mattn/go-runewidth => github.com/mattn/go-runewidth v0.0.9
 	github.com/mattn/go-shellwords => github.com/mattn/go-shellwords v0.0.0-20180201004752-39dbbfa24bbc
 	github.com/mattn/go-sqlite3 => github.com/mattn/go-sqlite3 v0.0.0-20190716055609-b612a2feea6a
