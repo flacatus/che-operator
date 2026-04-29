@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.24.0
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -225,7 +225,7 @@ replace (
 	github.com/go-openapi/swag => github.com/go-openapi/swag v0.19.5
 	github.com/go-openapi/validate => github.com/go-openapi/validate v0.19.2
 	github.com/go-playground/universal-translator => github.com/go-playground/universal-translator v0.16.0
-	github.com/go-sql-driver/mysql => github.com/go-sql-driver/mysql v1.4.1
+	github.com/go-sql-driver/mysql => github.com/go-sql-driver/mysql v1.10.0
 	github.com/go-stack/stack => github.com/go-stack/stack v1.8.0
 	github.com/gobuffalo/flect => github.com/gobuffalo/flect v0.1.0
 	github.com/gobuffalo/here => github.com/gobuffalo/here v0.6.0
