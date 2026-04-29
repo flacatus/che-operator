@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -11,7 +11,7 @@ require (
 	github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
-	github.com/sirupsen/logrus v1.8.1
+	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.8.4
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.23.0
@@ -63,14 +63,14 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/grpc v1.58.3 // indirect
-	google.golang.org/protobuf v1.34.1 // indirect
+	google.golang.org/protobuf v1.35.1 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
@@ -160,7 +160,7 @@ replace (
 	github.com/containerd/cgroups => github.com/containerd/cgroups v0.0.0-20191002205938-3de5a6bb4823
 	github.com/containerd/console => github.com/containerd/console v0.0.0-20180822173158-c12b1e7919c1
 	github.com/containerd/containerd => github.com/containerd/containerd v1.3.3
-	github.com/containerd/continuity => github.com/containerd/continuity v0.0.0-20200413184840-d3ef23f19fbb
+	github.com/containerd/continuity => github.com/containerd/continuity v0.5.0
 	github.com/containerd/fifo => github.com/containerd/fifo v0.0.0-20190226154929-a9fb20d87448
 	github.com/containerd/go-runc => github.com/containerd/go-runc v0.0.0-20180907222934-5a6d9f37cfa3
 	github.com/containerd/ttrpc => github.com/containerd/ttrpc v1.0.1
