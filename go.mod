@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.23
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -33,7 +33,7 @@ require (
 	github.com/emicklei/go-restful/v3 v3.9.0 // indirect
 	github.com/evanphx/json-patch v5.6.0+incompatible // indirect
 	github.com/evanphx/json-patch/v5 v5.6.0 // indirect
-	github.com/fsnotify/fsnotify v1.6.0 // indirect
+	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/go-logr/zapr v1.2.3 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.20.0 // indirect
@@ -204,7 +204,7 @@ replace (
 	github.com/fatih/color => github.com/fatih/color v1.9.0
 	github.com/fatih/set => github.com/fatih/set v0.2.1
 	github.com/flynn/go-shlex => github.com/flynn/go-shlex v0.0.0-20150515145356-3f9db97f8568
-	github.com/fsnotify/fsnotify => github.com/fsnotify/fsnotify v1.4.7
+	github.com/fsnotify/fsnotify => github.com/fsnotify/fsnotify v1.10.1
 	github.com/fsouza/fake-gcs-server => github.com/fsouza/fake-gcs-server v1.17.0
 	github.com/fvbommel/sortorder => github.com/fvbommel/sortorder v1.0.1
 	github.com/garyburd/redigo => github.com/garyburd/redigo v1.6.0
