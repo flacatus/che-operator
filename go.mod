@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -12,7 +12,7 @@ require (
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
 	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.23.0
 	k8s.io/api v0.26.1
@@ -63,7 +63,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/sys v0.20.0 // indirect
 	golang.org/x/term v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
@@ -183,7 +183,7 @@ replace (
 	github.com/docker/cli => github.com/docker/cli v0.0.0-20200130152716-5d0cf8839492
 	github.com/docker/distribution => github.com/docker/distribution v2.7.1+incompatible
 	github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309
-	github.com/docker/docker-credential-helpers => github.com/docker/docker-credential-helpers v0.6.3
+	github.com/docker/docker-credential-helpers => github.com/docker/docker-credential-helpers v0.9.7
 	github.com/docker/go-connections => github.com/docker/go-connections v0.4.0
 	github.com/docker/go-events => github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c
 	github.com/docker/go-metrics => github.com/docker/go-metrics v0.0.1
