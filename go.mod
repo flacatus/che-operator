@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.21
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -12,7 +12,7 @@ require (
 	github.com/operator-framework/api v0.10.0
 	github.com/operator-framework/operator-lifecycle-manager v0.18.1
 	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.23.0
 	k8s.io/api v0.26.1
@@ -321,7 +321,7 @@ replace (
 	github.com/kylelemons/godebug => github.com/kylelemons/godebug v1.1.0
 	github.com/leodido/go-urn => github.com/leodido/go-urn v0.0.0-20201213191625-6c96508144d0
 	github.com/lestrrat-go/envload => github.com/lestrrat-go/envload v0.0.0-20180220234015-a3eb8ddeffcc
-	github.com/lestrrat-go/strftime => github.com/lestrrat-go/strftime v1.0.1
+	github.com/lestrrat-go/strftime => github.com/lestrrat-go/strftime v1.2.0
 	github.com/lib/pq => github.com/lib/pq v0.0.0-20190415174712-51e2106eed1c
 	github.com/liggitt/tabwriter => github.com/liggitt/tabwriter v0.0.0-20181228230101-89fcab3d43de
 	github.com/lithammer/dedent => github.com/lithammer/dedent v1.1.0
