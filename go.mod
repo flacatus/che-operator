@@ -159,7 +159,7 @@ replace (
 	github.com/cockroachdb/datadriven => github.com/cockroachdb/datadriven v0.0.0-20190809214429-80d97fb3cbaa
 	github.com/containerd/cgroups => github.com/containerd/cgroups v0.0.0-20191002205938-3de5a6bb4823
 	github.com/containerd/console => github.com/containerd/console v0.0.0-20180822173158-c12b1e7919c1
-	github.com/containerd/containerd => github.com/containerd/containerd v1.3.3
+	github.com/containerd/containerd => github.com/containerd/containerd v1.7.32
 	github.com/containerd/continuity => github.com/containerd/continuity v0.0.0-20200413184840-d3ef23f19fbb
 	github.com/containerd/fifo => github.com/containerd/fifo v0.0.0-20190226154929-a9fb20d87448
 	github.com/containerd/go-runc => github.com/containerd/go-runc v0.0.0-20180907222934-5a6d9f37cfa3
