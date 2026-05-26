@@ -92,7 +92,7 @@ require (
 	golang.org/x/mod v0.12.0 // indirect
 	golang.org/x/tools v0.13.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
+	google.golang.org/genproto/googleapis/rpc 3dc84a4a5aaa // indirect
 	honnef.co/go/tools v0.0.1-2020.1.3 // indirect
 )
 
@@ -449,7 +449,7 @@ replace (
 	google.golang.org/api => google.golang.org/api v0.20.0
 	google.golang.org/appengine => google.golang.org/appengine v1.6.5
 	google.golang.org/cloud => cloud.google.com/go v0.0.0-20200305180117-a6b88cf34a49
-	google.golang.org/genproto/googleapis/rpc => google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
+	google.golang.org/genproto/googleapis/rpc 3dc84a4a5aaa google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
 	google.golang.org/grpc => google.golang.org/grpc v1.58.3
 	google.golang.org/protobuf => google.golang.org/protobuf v1.34.1
 	gopkg.in/airbrake/gobrake.v2 => gopkg.in/airbrake/gobrake.v2 v2.0.9
