@@ -52,7 +52,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/onsi/gomega v1.27.10 // indirect
-	github.com/operator-framework/operator-registry v1.13.6 // indirect
+	github.com/operator-framework/operator-registry v1.69.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/prometheus/client_golang v1.14.0 // indirect
@@ -369,7 +369,7 @@ replace (
 	github.com/openshift/api => github.com/openshift/api v0.0.0-20230120182048-88b476f987ed
 	github.com/openshift/client-go => github.com/openshift/client-go v0.0.0-20200326155132-2a6cd50aedd0
 	github.com/opentracing/opentracing-go => github.com/opentracing/opentracing-go v1.1.0
-	github.com/operator-framework/operator-registry => github.com/operator-framework/operator-registry v1.13.6
+	github.com/operator-framework/operator-registry => github.com/operator-framework/operator-registry v1.69.0
 	github.com/otiai10/copy => github.com/otiai10/copy v1.2.0
 	github.com/otiai10/curr => github.com/otiai10/curr v1.0.0
 	github.com/otiai10/mint => github.com/otiai10/mint v1.3.1
