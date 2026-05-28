@@ -1,6 +1,6 @@
 module github.com/eclipse-che/che-operator
 
-go 1.19
+go 1.25
 
 require (
 	github.com/che-incubator/kubernetes-image-puller-operator v0.0.0-20210929175054-0128446f5af7
@@ -14,7 +14,7 @@ require (
 	github.com/sirupsen/logrus v1.8.1
 	github.com/stretchr/testify v1.8.4
 	go.uber.org/zap v1.24.0
-	golang.org/x/net v0.23.0
+	golang.org/x/net v0.30.0
 	k8s.io/api v0.26.1
 	k8s.io/apiextensions-apiserver v0.26.1
 	k8s.io/apimachinery v0.26.1
@@ -63,9 +63,9 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/oauth2 v0.10.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
-	golang.org/x/term v0.18.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/term v0.25.0 // indirect
+	golang.org/x/text v0.19.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
@@ -89,8 +89,9 @@ require (
 	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
 	go.uber.org/tools v0.0.0-20190618225709-2cfd321de3ee // indirect
 	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
-	golang.org/x/mod v0.12.0 // indirect
-	golang.org/x/tools v0.13.0 // indirect
+	golang.org/x/mod v0.21.0 // indirect
+	golang.org/x/sync v0.8.0 // indirect
+	golang.org/x/tools v0.26.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
 	honnef.co/go/tools v0.0.1-2020.1.3 // indirect
@@ -390,7 +391,7 @@ replace (
 	github.com/redhat-cop/operator-utils => github.com/redhat-cop/operator-utils v1.1.4
 	github.com/remyoudompheng/bigfft => github.com/remyoudompheng/bigfft v0.0.0-20190728182440-6a916e37a237
 	github.com/rogpeppe/fastuuid => github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af
-	github.com/rogpeppe/go-internal => github.com/rogpeppe/go-internal v1.3.0
+	github.com/rogpeppe/go-internal => github.com/rogpeppe/go-internal v1.15.0
 	github.com/rs/xid => github.com/rs/xid v1.2.1
 	github.com/rs/zerolog => github.com/rs/zerolog v1.15.0
 	github.com/russross/blackfriday => github.com/russross/blackfriday v1.5.2
