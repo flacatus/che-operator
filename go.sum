@@ -709,7 +709,7 @@ github.com/cznic/mathutil v0.0.0-20180504122225-ca4c9f2c1369/go.mod h1:e6NPNENfs
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/daviddengcn/go-colortext v0.0.0-20160507010035-511bcaf42ccd/go.mod h1:dv4zxwHi5C/8AeI+4gX4dCWOIvNi7I6JCSX0HvlKPgE=
-github.com/deislabs/oras v0.8.1/go.mod h1:Mx0rMSbBNaNfY9hjpccEnxkOqJL6KGjtxNHPLC4G4As=
+github.com/deislabs/oras v0.9.0/go.mod h1:QXnMi3+eEm/rkgGT6L+Lt0TT2WLA7pOzuk7tZIsUhFM=
 github.com/denisenkom/go-mssqldb v0.0.0-20190204142019-df6d76eb9289/go.mod h1:xN/JuLBIz4bjkxNmByTiV1IbhfnYb6oo99phBn4Eqhc=
 github.com/devfile/api/v2 v2.2.2 h1:DXRCPWFlZhTIE38Of2jzTRjQHadfbxBC8GS+m+EjoCU=
 github.com/devfile/api/v2 v2.2.2/go.mod h1:qp8jcw12y1JdCsxjK/7LJ7uWaJOxcY1s2LUk5PhbkbM=
