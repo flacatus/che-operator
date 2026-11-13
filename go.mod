@@ -335,7 +335,7 @@ replace (
 	github.com/mattn/go-sqlite3 => github.com/mattn/go-sqlite3 v0.0.0-20190716055609-b612a2feea6a
 	github.com/matttproud/golang_protobuf_extensions => github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369
 	github.com/maxbrunsfeld/counterfeiter/v6 => github.com/maxbrunsfeld/counterfeiter/v6 v6.2.2
-	github.com/miekg/dns => github.com/miekg/dns v1.0.14
+	github.com/miekg/dns => github.com/miekg/dns v1.1.25
 	github.com/mikefarah/yq/v3 => github.com/mikefarah/yq/v3 v3.0.0-20201202084205-8846255d1c37
 	github.com/mitchellh/cli => github.com/mitchellh/cli v1.0.0
 	github.com/mitchellh/copystructure => github.com/mitchellh/copystructure v1.0.0
